@@ -1,0 +1,78 @@
+.how-we-do-it {
+  padding-bottom: 50px;
+
+  .title-section {
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  .title-how-we-do {
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    &::after {
+      content: ' ';
+      display: block;
+      width: 25px;
+      height: 2px;
+      background-color: $accentColor;
+      margin: 20px auto;
+    }
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.66;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: $primaryTextColor;
+  }
+
+  .item {
+    min-height: 280px;
+    background-color: $basicWhiteColor;
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+    padding: 30px 10px 22px 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+
+      .icon-how-we-do {
+        width: 74px;
+        height: 60px;
+        fill: $accentColor;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $accentColor;
+      color: $basicWhiteColor;
+    }
+
+    &:hover .icon-how-we-do,
+    &:focus .icon-how-we-do {
+      fill: $basicWhiteColor;
+    }
+
+    &:hover .description,
+    &:focus .description {
+      fill: $basicWhiteColor;
+      color: $basicWhiteColor;
+    }
+
+    &:hover .title-how-we-do::after,
+    &:hover .title-how-we-do::after {
+      background-color: $basicWhiteColor;
+    }
+  }
+}
