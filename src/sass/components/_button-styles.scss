@@ -1,0 +1,65 @@
+.button {
+  padding: 15px 1px;
+  border: 2px solid #ff6b09;
+  width: 260px;
+  height: 48px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  align-items: center;
+  text-align: center;
+
+  color: $basicWhiteColor;
+  background-color: $accentColor;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 354px;
+    height: 70px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+  }
+}
+
+.mobile-menu-button {
+  padding: 15px 1px;
+  border: 2px solid #ff6b09;
+
+  width: 260px;
+  height: 48px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: $accentColor;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 336px;
+    height: 70px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+  }
+}
