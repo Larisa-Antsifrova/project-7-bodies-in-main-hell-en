@@ -1,0 +1,29 @@
+.section-teacher {
+  padding-top: 39px;
+  padding-bottom: 0;
+}
+
+.section-title {
+  margin-bottom: 20px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 2.6;
+  letter-spacing: 0.03em;
+}
+
+.teacher-name {
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+.decor-line {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid $primaryTextColor;
+}
