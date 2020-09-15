@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.site-nav {
+  .item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .item:nth-child(2) {
+    color: #ff6b09;
+  }
+}
