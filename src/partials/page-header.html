@@ -2,35 +2,52 @@
 <header class="page-header">
   <div class="container page-header-section">
     <nav class="nav">
-      <a href="./" class="logo"> Logo </a>
+      <a href="./" class="logo">
+        <img src="./icons/logo.png" alt="" />
+      </a>
       <button
+        class="menu-btn"
         type="button"
-        class="menu-button"
         aria-expanded="false"
-        aria-controls="mobile-nav"
+        aria-controls="menu-container"
         data-menu-button
       >
-        <svg with="30" height="30" aria-label="Переключатель мобильного меню">
-          <use class="icon-cross" href="#"></use>
-          <use class="icon-menu" href="#"></use>
+        <svg
+          class=""
+          width="24"
+          height="16"
+          aria-label="переключатель мбильного меню"
+        >
+          <use class="icon-open" href="#"></use>
+          <use class="icon-close" href="#"></use>
         </svg>
       </button>
-      <div class="mobile-nav" id="mobile-nav" data-menu>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#" class="nav-link">Программы обучения</a>
+      <div class="menu-container" id="menu-container" data-menu>
+        <ul class="site-nav">
+          <li class="item">
+            <a class="link nav-link" href="#">Программы обучения</a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">О нас</a>
+          <li class="item">
+            <a class="link nav-link" href="#" rel="noopener noreferrer"
+              >О нас</a
+            >
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Варианты обучения</a>
+          <li class="item">
+            <a class="link nav-link" href="" rel="noopener noreferrer"
+              >Варианты обучения</a
+            >
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">Контакты</a>
+          <li class="item">
+            <a class="link nav-link" href="" rel="noopener noreferrer"
+              >Контакты</a
+            >
+          </li>
+          <li class="item">
+            <a class="link nav-link" href="" rel="noopener noreferrer"
+              >Консультация по телефону</a
+            >
           </li>
         </ul>
-        <button type="button" class="button">Консультация по телефону</button>
       </div>
     </nav>
   </div>
