@@ -2,13 +2,59 @@
   <div class="container">
     <h2 class="section-title">Преподаватель</h2>
     <picture>
-      <source srcset="" type="image/webp" media="(min-width:1344px)" />
-      <source srcset="" type="image/jpeg" media="(min-width:1344px)" />
-      <source srcset="" type="image/webp" media="(min-width:768px)" />
-      <source srcset="" type="image/jpeg" media="(min-width:768px)" />
-      <source srcset="" type="image/webp" media="(max-width:767px)" />
-      <source srcset="" type="image/jpeg" media="(max-width:767px)" />
-      <img src="" alt="Фото преподавателя Елены" srcset="" />
+      <source
+        srcset="
+          ./images/teacher/teacher-desktop@1x.webp 1x,
+          ./images/teacher/teacher-desktop@2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width:1344px)"
+      />
+      <source
+        srcset="
+          ./images/teacher/teacher-desktop@1x.jpg 1x,
+          ./images/teacher/teacher-desktop@2x.jpg 2x
+        "
+        type="image/jpeg"
+        media="(min-width:1344px)"
+      />
+      <source
+        srcset="
+          ./images/teacher/teacher-tablet@1x.webp 1x,
+          ./images/teacher/teacher-tablet@2x.webp 2x
+        "
+        type="image/webp"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/teacher/teacher-tablet@1x.jpg 1x,
+          ./images/teacher/teacher-tablet@2x.jpg 2x
+        "
+        type="image/jpeg"
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/teacher/teacher-mobile@1x.webp 1x,
+          ./images/teacher/teacher-mobile@2x.webp 2x
+        "
+        type="image/webp"
+        media="(max-width:767px)"
+      />
+      <source
+        srcset="
+          ./images/teacher/teacher-mobile@1x.jpg 1x,
+          ./images/teacher/teacher-mobile@2x.png 2x
+        "
+        type="image/jpeg"
+        media="(max-width:767px)"
+      />
+      <img
+        src="./images/teacher/teacher-mobile@1x.jpg"
+        alt="Фото преподавателя Елены"
+        srcset="./images/teacher/teacher-mobile@2x.png 2x"
+      />
     </picture>
 
     <h3 class="teacher-name">Елена Морева</h3>
