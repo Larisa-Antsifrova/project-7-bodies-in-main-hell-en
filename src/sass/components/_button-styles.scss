@@ -15,10 +15,13 @@
 
   color: $basicWhiteColor;
   background-color: $accentColor;
+  transition: color $primaryTransition, background-color $primaryTransition;
 
   &:hover,
   &:focus {
     cursor: pointer;
+    color: $accentColor;
+    background-color: $basicWhiteColor;
   }
 
   @media screen and (min-width: 1344px) {
@@ -51,6 +54,8 @@
   &:hover,
   &:focus {
     cursor: pointer;
+    color: $accentColor;
+    background-color: $basicWhiteColor;
   }
 
   @media screen and (min-width: 1344px) {
@@ -61,5 +66,18 @@
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.14em;
+  }
+}
+
+.header-link.button {
+  transition: color $primaryTransition, background-color $primaryTransition;
+}
+
+.header-link.button {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $basicWhiteColor;
+    background-color: $accentColor;
   }
 }
