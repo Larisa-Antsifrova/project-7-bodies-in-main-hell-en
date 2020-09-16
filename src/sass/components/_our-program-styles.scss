@@ -1,0 +1,98 @@
+.program-section {
+    background: #111518;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // position: relative;
+
+    & .section-title {
+        font-family: Montserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 130%;
+/* or 26px */
+
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #FFFFFF;
+
+margin-bottom: 43px;
+
+    }
+}
+
+.program-title {
+    font-family: Montserrat;
+font-weight: bold;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+letter-spacing: 0.08em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+display: flex;
+align-items: center;
+// margin-left: 26px;
+
+
+&::before {
+    content: "";
+    background: #FF6B09;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 100%;
+    margin-right: 26px;
+    z-index: 999;
+}
+}
+
+.program-item {
+    font-family: Montserrat;
+    font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 164.9%;
+/* or 20px */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.08em;
+
+color: #FF6B09;
+}
+
+.program-line {
+    border-left: 1px solid #FFFFFF;
+    height: 1282px;
+    position: absolute;
+    top: 13px;
+    left: 5.5px;
+
+    
+   
+}
+
+.program-box {
+    position: relative;
+    padding: 0;
+
+}
+
+.program-topik {
+    font-family: Montserrat;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+/* or 167% */
+
+letter-spacing: 0.08em;
+
+color: #B9B9B9;
+
+opacity: 0.5;
+}
