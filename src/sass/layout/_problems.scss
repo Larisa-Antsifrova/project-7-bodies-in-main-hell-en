@@ -1,0 +1,56 @@
+.section-problems {
+  background-color: $darkBackgrounColor;
+}
+
+.problems-section-title {
+  margin-bottom: 27px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+
+  color: $basicWhiteColor;
+}
+
+.color-orange {
+  color: $accentColor;
+}
+
+.problems-list {
+  padding: 50px 30px 20px 30px;
+  background-color: $basicWhiteColor;
+}
+
+.problems-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 40px;
+
+  color: $primaryTitleColor;
+}
+
+.problems-item:last-child {
+  margin-bottom: 0;
+}
+
+// CSS Counter
+
+.problems-list {
+  counter-reset: section;
+}
+
+.problems-item {
+  position: relative;
+}
+
+.problems-item::before {
+  counter-increment: section;
+  content: '— 0' counters(section, '.') ' ';
+  color: $accentColor;
+
+  position: absolute;
+  top: -30px;
+}
