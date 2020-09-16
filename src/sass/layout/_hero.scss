@@ -1,0 +1,44 @@
+.hero-section {
+  position: relative;
+  background-image: url(../images/icons/bcg/wave-curve.svg);
+  background-size: cover;
+
+  .button {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 36px;
+    margin-left: auto;
+  }
+
+  .img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.hero-title {
+  @include font(800, 20px, 1.35, 0.03em);
+  color: $primaryTitleColor;
+  margin-bottom: 30px;
+
+  .hero-label {
+    display: block;
+  }
+}
+
+.hero-description {
+  margin-bottom: 30px;
+  @include font(700, 14px, 1.57, 0.08em);
+  .grey-color {
+    display: block;
+    font-weight: 500;
+    color: $primaryTextColor;
+  }
+  .orange-color {
+    color: $accentColor;
+  }
+}
+
+.hero-teacher {
+  display: flex;
+  justify-content: center;
+}
