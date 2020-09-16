@@ -1,8 +1,9 @@
-.section-problems {
+.why-we-section {
   background-color: $darkBackgrounColor;
 }
 
-.problems-section-title {
+.why-we-title {
+  max-width: 180px;
   margin-bottom: 30px;
   font-weight: 800;
   font-size: 20px;
@@ -12,17 +13,13 @@
   color: $basicWhiteColor;
 }
 
-.color-orange {
-  color: $accentColor;
-}
-
-.problems-list {
+.why-we-list {
   padding: 50px 30px 20px 30px;
   background-color: $basicWhiteColor;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
-.problems-item {
+.why-we-item {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.71;
@@ -33,21 +30,21 @@
   color: $primaryTitleColor;
 }
 
-.problems-item:last-child {
+.why-we-item:last-child {
   margin-bottom: 0;
 }
 
 // CSS Counter
 
-.problems-list {
+.why-we-list {
   counter-reset: section;
 }
 
-.problems-item {
+.why-we-item {
   position: relative;
 }
 
-.problems-item::before {
+.why-we-item::before {
   counter-increment: section;
   content: '— 0' counters(section, '.') ' ';
   color: $accentColor;
