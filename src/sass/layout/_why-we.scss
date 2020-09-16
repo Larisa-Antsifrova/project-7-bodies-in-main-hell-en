@@ -1,0 +1,54 @@
+.why-we-section {
+  background-color: $darkBackgrounColor;
+}
+
+.why-we-title {
+  max-width: 180px;
+  margin-bottom: 30px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.36;
+  letter-spacing: 0.03em;
+
+  color: $basicWhiteColor;
+}
+
+.why-we-list {
+  padding: 50px 30px 20px 30px;
+  background-color: $basicWhiteColor;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+
+.why-we-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 40px;
+
+  color: $primaryTitleColor;
+}
+
+.why-we-item:last-child {
+  margin-bottom: 0;
+}
+
+// CSS Counter
+
+.why-we-list {
+  counter-reset: section;
+}
+
+.why-we-item {
+  position: relative;
+}
+
+.why-we-item::before {
+  counter-increment: section;
+  content: '— 0' counters(section, '.') ' ';
+  color: $accentColor;
+
+  position: absolute;
+  top: -30px;
+}
