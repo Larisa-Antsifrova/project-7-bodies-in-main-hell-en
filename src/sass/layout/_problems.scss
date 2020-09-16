@@ -1,5 +1,9 @@
 .section-problems {
-  background-color: $darkBackgrounColor;
+  background-image: linear-gradient(
+    to bottom,
+    $darkBackgrounColor 75%,
+    $basicWhiteColor 50%
+  );
 }
 
 .problems-section-title {
