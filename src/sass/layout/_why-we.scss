@@ -1,5 +1,9 @@
 .why-we-section {
-  background-color: $darkBackgrounColor;
+  background-image: linear-gradient(
+    to bottom,
+    $darkBackgrounColor 75%,
+    $basicWhiteColor 50%
+  );
 }
 
 .why-we-title {
