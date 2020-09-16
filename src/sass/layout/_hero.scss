@@ -1,13 +1,18 @@
 .hero-section {
-  background-image: url(../images/icons/bcg/wave-curve.svg);
-  background-size: cover;
+  //   background-image: url(../images/icons/bcg/wave-curve.svg);
+  //   background-size: cover;
+
+  .button {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 36px;
+    margin-left: auto;
+  }
 }
 .hero-title {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.35;
-  letter-spacing: 0.03em;
+  @include font(800, 20px, 1.35, 0.03em);
   color: $primaryTitleColor;
+  margin-bottom: 30px;
 
   .hero-label {
     display: block;
@@ -15,11 +20,15 @@
 }
 
 .hero-description {
+  //   text-align: center;
+  margin-bottom: 30px;
+  @include font(700, 14px, 1.57, 0.08em);
   .grey-color {
+    display: block;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.57;
-    letter-spacing: 0.08em;
     color: $primaryTextColor;
+  }
+  .orange-color {
+    color: $accentColor;
   }
 }
