@@ -27,3 +27,21 @@
   width: 100%;
   border-bottom: 1px solid $primaryTextColor;
 }
+
+.teacher-item {
+  display: flex;
+  margin-top: 20px;
+}
+
+.teacher-icon-check {
+  width: 17px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.teacher-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.06em;
+}
