@@ -1,3 +1,56 @@
+.warranty-section h2 {
+  margin-bottom: 30px;
+}
+
 .warranty-section li {
   list-style-image: url(../images/icons/list-marker/fire-list-marker.svg);
+  position: relative;
+  padding-left: 20px;
+
+  &::after {
+    position: absolute;
+
+    line-height: 24px;
+    background: #fff;
+  }
+
+  &::before {
+    position: absolute;
+    left: -15px;
+    top: 25px;
+    content: '';
+    height: 68px;
+    width: 0;
+    border-left: 1px dashed #b9b9b9;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    @media screen and (min-width: 768px) {
+      height: 30px;
+    }
+    @media screen and (min-width: 1344px) {
+      height: 40px;
+    }
+  }
+
+  &:last-of-type:before {
+    border: none;
+  }
+}
+
+.warranty-list li {
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+.background-list-color {
+  background-color: $lightBackgroundColor;
 }
