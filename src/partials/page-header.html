@@ -2,8 +2,43 @@
 <header class="page-header">
   <div class="container">
     <nav class="nav">
-      <a href="./" class="logo">
-        <img src="#" alt="" />
+      <a href="#" class="logo">
+        <picture>
+          <source
+            srcset="
+              ./images/logo-raster/logo-desktop-mix@1x.png  1x,
+              ./images/logo-raster/logo-desktop-mix@1x.webp 1x,
+              ./images/logo-raster/logo-desktop-mix@2x.png  2x,
+              ./images/logo-raster/logo-desktop-mix@2x.webp 2x
+            "
+            media="(min-width:1344px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/logo-raster/logo-tablet-mix@1x.png  1x,
+              ./images/logo-raster/logo-tablet-mix@1x.webp 1x,
+              ./images/logo-raster/logo-tablet-mix@2x.png  2x,
+              ./images/logo-raster/logo-tablet-mix@2x.webp 2x
+            "
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              ./images/logo-raster/logo-mobile-black@1x.png  1x,
+              ./images/logo-raster/logo-mobile-black@1x.webp 1x,
+              ./images/logo-raster/logo-mobile-black@2x.png  2x,
+              ./images/logo-raster/logo-mobile-black@2x.webp 2x
+            "
+            media="(min-width:320px)"
+            type="image/webp"
+          />
+          <img
+            src="./images/logo-raster/logo-mobile-black@1x.png"
+            alt="логотип компании"
+          />
+        </picture>
       </a>
       <button
         class="menu-btn"
@@ -18,10 +53,17 @@
           height="16"
           aria-label="переключатель мбильного меню"
         >
-          <use class="icon-open" href="#"></use>
-          <use class="icon-close" href="#"></use>
+          <use
+            class="icon-open"
+            href="./images/icons/burger-menu/burger-menu.svg"
+          ></use>
+          <use
+            class="icon-close"
+            href="./images/icons/burger-menu/close-menu.svg"
+          ></use>
         </svg>
       </button>
+
       <div class="menu-container" id="menu-container">
         <ul class="site-nav">
           <li class="item">
@@ -29,25 +71,27 @@
           </li>
           <li class="item">
             <a class="link nav-link" href="#" rel="noopener noreferrer"
-              >О нас</a
-            >
+              >О нас
+            </a>
           </li>
           <li class="item">
             <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Варианты обучения</a
-            >
+              >Варианты обучения
+            </a>
           </li>
           <li class="item">
             <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Контакты</a
-            >
+              >Контакты
+            </a>
           </li>
           <li class="item">
             <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Консультация по телефону</a
-            >
+              >Консультация по телефону
+            </a>
           </li>
         </ul>
+
+        <button class="button">хочу на бесплатное занятие</button>
       </div>
     </nav>
   </div>

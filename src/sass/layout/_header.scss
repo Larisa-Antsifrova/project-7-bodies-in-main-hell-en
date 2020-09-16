@@ -1,14 +1,51 @@
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.page-header {
+  position: relative;
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    display: inline-block;
+  }
+  .menu-btn {
+    display: inline-block;
+  }
 }
 
 .site-nav {
+  margin-top: 50px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  .item {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+  }
   .item:not(:last-child) {
     margin-bottom: 18px;
   }
   .item:nth-child(2) {
     color: #ff6b09;
+  }
+}
+
+.menu-container {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  max-width: 767px;
+  width: 100%;
+  background-color: $burgerMenuBackgroundColor;
+
+  .button {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    display: none;
   }
 }
