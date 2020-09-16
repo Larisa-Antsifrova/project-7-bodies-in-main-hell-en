@@ -45,3 +45,36 @@
   line-height: 1.21;
   letter-spacing: 0.06em;
 }
+
+.decor-line-orange {
+  content: ' ';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: $accentColor;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-text {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  color: $primaryTextColor;
+
+  &:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+.experience-link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+
+  text-decoration-line: underline;
+  color: $accentColor;
+}
