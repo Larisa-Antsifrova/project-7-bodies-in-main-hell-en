@@ -1,0 +1,15 @@
+.hero-section {
+  background-image: url(../images/icons/bcg/wave-curve.svg);
+  background-size: cover;
+}
+.hero-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  color: $primaryTitleColor;
+
+  .hero-label {
+    display: block;
+  }
+}

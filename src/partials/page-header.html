@@ -12,7 +12,7 @@
               ./images/logo-raster/logo-desktop-mix@2x.webp 2x
             "
             media="(min-width:1344px)"
-            type="image/webp"
+            type="image/webp/png"
           />
           <source
             srcset="
@@ -22,7 +22,7 @@
               ./images/logo-raster/logo-tablet-mix@2x.webp 2x
             "
             media="(min-width:768px)"
-            type="image/webp"
+            type="image/webp/png"
           />
           <source
             srcset="
@@ -32,7 +32,7 @@
               ./images/logo-raster/logo-mobile-black@2x.webp 2x
             "
             media="(min-width:320px)"
-            type="image/webp"
+            type="image/webp/png"
           />
           <img
             src="./images/logo-raster/logo-mobile-black@1x.png"
@@ -49,49 +49,65 @@
       >
         <svg
           class=""
-          width="24"
-          height="16"
+          width="20"
+          height="13"
           aria-label="переключатель мбильного меню"
         >
           <use
             class="icon-open"
-            href="./images/icons/burger-menu/burger-menu.svg"
-          ></use>
-          <use
-            class="icon-close"
-            href="./images/icons/burger-menu/close-menu.svg"
+            href="./images/icons/sprite.svg#icon-burger"
           ></use>
         </svg>
       </button>
 
       <div class="menu-container" id="menu-container">
-        <ul class="site-nav">
-          <li class="item">
-            <a class="link nav-link" href="#">Программы обучения</a>
-          </li>
-          <li class="item">
-            <a class="link nav-link" href="#" rel="noopener noreferrer"
-              >О нас
+        <div class="container">
+          <div class="mobile-header">
+            <a href="#" class="logo">
+              <img src="./images/logo-raster/logo-white.png" alt="" />
             </a>
-          </li>
-          <li class="item">
-            <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Варианты обучения
-            </a>
-          </li>
-          <li class="item">
-            <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Контакты
-            </a>
-          </li>
-          <li class="item">
-            <a class="link nav-link" href="" rel="noopener noreferrer"
-              >Консультация по телефону
-            </a>
-          </li>
-        </ul>
+            <button class="menu-btn" type="button">
+              <svg
+                width="20"
+                height="13"
+                aria-label="переключатель мбильного меню"
+              >
+                <use
+                  class="icon-close"
+                  href="./images/icons/sprite.svg#icon-close"
+                ></use>
+              </svg>
+            </button>
+          </div>
 
-        <button class="button">хочу на бесплатное занятие</button>
+          <ul class="site-nav">
+            <li class="item">
+              <a class="link nav-link" href="#">Программы обучения</a>
+            </li>
+            <li class="item">
+              <a class="link nav-link" href="#" rel="noopener noreferrer"
+                >О нас
+              </a>
+            </li>
+            <li class="item">
+              <a class="link nav-link" href="" rel="noopener noreferrer"
+                >Варианты обучения
+              </a>
+            </li>
+            <li class="item">
+              <a class="link nav-link" href="" rel="noopener noreferrer"
+                >Контакты
+              </a>
+            </li>
+            <li class="item">
+              <a class="link nav-link" href="" rel="noopener noreferrer"
+                >Консультация по телефону
+              </a>
+            </li>
+          </ul>
+
+          <button class="button">хочу на бесплатное занятие</button>
+        </div>
       </div>
     </nav>
   </div>
