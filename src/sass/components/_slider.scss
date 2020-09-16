@@ -5,6 +5,11 @@
   background-color: $lightBackgroundColor;
 }
 
+.slider-item {
+  padding: 20px;
+  box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+}
+
 .slider-title {
   margin-bottom: 20px;
   font-weight: 800;
@@ -12,4 +17,50 @@
   line-height: 1.3;
   text-align: center;
   letter-spacing: 0.03em;
+}
+.slider-client-image {
+  margin: 0 auto;
+}
+
+.slider-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+}
+
+.slider-item-title {
+  margin-bottom: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  color: $accentColor;
+}
+
+.slider-client-description {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.08em;
+
+  color: $primaryTextColor;
+}
+
+.slider-feedback {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  text-align: center;
+
+  color: $secondaryTextColor;
+}
+
+.read-more-link {
+  color: $accentColor;
+  text-decoration: underline;
 }
