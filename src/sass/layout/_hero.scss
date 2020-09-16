@@ -1,6 +1,7 @@
 .hero-section {
-  //   background-image: url(../images/icons/bcg/wave-curve.svg);
-  //   background-size: cover;
+  position: relative;
+  background-image: url(../images/icons/bcg/wave-curve.svg);
+  background-size: cover;
 
   .button {
     display: block;
@@ -35,4 +36,9 @@
   .orange-color {
     color: $accentColor;
   }
+}
+
+.hero-teacher {
+  display: flex;
+  justify-content: center;
 }

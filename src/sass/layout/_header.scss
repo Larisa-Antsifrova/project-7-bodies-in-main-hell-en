@@ -1,6 +1,6 @@
 .page-header {
   padding-top: 30px;
-  // position: relative;
+
   .nav {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +51,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  transition: fill $primaryTransition;
 
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
   @media screen and (min-width: 768px) {
     margin-left: 40px;
   }
