@@ -1,48 +1,119 @@
 <footer class="footer-background">
   <section class="section footer-section">
     <div class="container">
-      <h2 class="form-title">
-        Регистрация на <span class="orange-color">бесплатную</span> телефонную
-        <span class="orange-color">консультацию</span> по нюансам ЗНО по
-        английскому языку
-      </h2>
-      <p class="form-discription">
-        Оставь заявку на участие в
-        <span class="orange-color">бесплатном занятии.</span> С вами свяжется
-        консультант и ответит на вопросы
-      </p>
-      <form>
-        <div class="input-size">
-          <input
-            type="text"
-            name="name"
-            class="input-box"
-            placeholder="Имя*"
-            required
-          />
+      <div class="form-block">
+        <h2 class="form-title">
+          Регистрация на <span class="orange-color">бесплатную</span> телефонную
+          <span class="orange-color">консультацию</span> по нюансам ЗНО по
+          английскому языку
+        </h2>
+        <p class="form-discription">
+          Оставь заявку на участие в
+          <span class="orange-color">бесплатном занятии.</span> С вами свяжется
+          консультант и ответит на вопросы
+        </p>
+        <form>
+          <div class="input-size">
+            <input
+              type="text"
+              name="name"
+              class="input-box"
+              placeholder="Имя*"
+              required
+            />
+          </div>
+          <div class="input-size">
+            <input
+              type="text"
+              name="name"
+              class="input-box"
+              placeholder="Телефон*"
+              required
+            />
+          </div>
+          <button class="button footer-button">
+            Хочу на бесплатное занятие
+          </button>
+        </form>
+      </div>
+      <div class="contacts-block">
+        <div class="logo-wrap">
+          <a href="#" class="logo logo-footer">
+            <picture class="logo-universal">
+              <source
+                srcset="
+                  ./images/logo-raster/logo-desktop-mix@1x.webp 1x,
+                  ./images/logo-raster/logo-desktop-mix@2x.webp 2x
+                "
+                media="(min-width:1344px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/logo-raster/logo-tablet-mix@1x.webp 1x,
+                  ./images/logo-raster/logo-tablet-mix@2x.webp 2x
+                "
+                media="(min-width:768px)"
+                type="image/webp/png"
+              />
+
+              <source
+                srcset="
+                  ./images/logo-raster/logo-mobile-black@1x.webp 1x,
+                  ./images/logo-raster/logo-mobile-black@2x.webp 2x
+                "
+                media="(min-width:320px)"
+                type="image/webp/png"
+              />
+
+              <source
+                srcset="
+                  ./images/logo-raster/logo-desktop-mix@1x.png 1x,
+                  ./images/logo-raster/logo-desktop-mix@2x.png 2x
+                "
+                media="(min-width:1344px)"
+              />
+              <source
+                srcset="
+                  ./images/logo-raster/logo-tablet-mix@1x.png 1x,
+                  ./images/logo-raster/logo-tablet-mix@2x.png 2x
+                "
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="
+                  ./images/logo-raster/logo-mobile-black@1x.png 1x,
+                  ./images/logo-raster/logo-mobile-black@2x.png 2x
+                "
+                media="(min-width:320px)"
+              />
+              <img
+                src="./images/logo-raster/logo-mobile-black@1x.png"
+                alt="логотип компании"
+              />
+            </picture>
+          </a>
         </div>
-        <div class="input-size">
-          <input
-            type="text"
-            name="name"
-            class="input-box"
-            placeholder="Телефон*"
-            required
+        <address class="contacts-phone">
+          <a href="tel:+380000000000" class="contacts-link">
+            <svg class="contacts-icon" width="20" height="20">
+              <use href="./images/icons/sprite.svg#icon-phone"></use>
+            </svg>
+            +38 (000) 000 00 00
+          </a>
+        </address>
+        <a class="instagram-link" href="#">
+          <img
+            src="./images/icons/socials/instagram.svg"
+            alt="Иконка Инстаграм"
+            width="40px"
           />
-        </div>
-        <button class="button">Хочу на бесплатное занятие</button>
-      </form>
-      <div class="contacts">
-        <a class="logo" href="./"></a>
-        <div class="contacts-phone-number">+38 (000) 000 00 00</div>
-        <a class="instagram-page" href="#">
-          <svg>
-            <use></use>
-          </svg>
         </a>
       </div>
-      <div class="all-rights-block">
-        <p class="all-rigths">&#169; Все права защищены, 2019</p>
+    </div>
+    <div class="copy-block">
+      <div class="container">
+        <p class="copy-text">&#169; Все права защищены, 2019</p>
       </div>
     </div>
   </section>

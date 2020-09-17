@@ -57,30 +57,30 @@
           />
         </picture>
       </a>
-      <ul class="site-nav">
-        <li class="item">
-          <a class="link nav-link" href="#">Программы обучения</a>
-        </li>
-        <li class="item">
-          <a class="link nav-link" href="#" rel="noopener noreferrer">О нас </a>
-        </li>
-        <li class="item">
-          <a class="link nav-link" href="" rel="noopener noreferrer"
-            >Варианты обучения
-          </a>
-        </li>
-        <li class="item">
-          <a class="link nav-link" href="" rel="noopener noreferrer"
-            >Контакты
-          </a>
-        </li>
-        <li class="item">
-          <a class="link nav-link" href="" rel="noopener noreferrer"
-            >Консультация по телефону
-          </a>
-        </li>
-      </ul>
-      <a class="header-link button" href="" rel="noopener noreferrer"
+
+      <div class="container-tablet">
+        <ul class="site-nav">
+          <li class="item">
+            <a class="link nav-link" href="#">Программы обучения</a>
+          </li>
+          <li class="item">
+            <a class="link nav-link" href="#" rel="noopener noreferrer"
+              >О нас
+            </a>
+          </li>
+          <li class="item">
+            <a class="link nav-link" href="" rel="noopener noreferrer"
+              >Варианты обучения
+            </a>
+          </li>
+          <li class="item">
+            <a class="link nav-link" href="" rel="noopener noreferrer"
+              >Контакты
+            </a>
+          </li>
+        </ul>
+      </div>
+      <a class="button header-link" href="" rel="noopener noreferrer"
         >Консультация по телефону
       </a>
       <button
@@ -91,38 +91,49 @@
         data-menu-button
       >
         <svg
-          class="icon-burger"
-          width="36"
-          height="36"
+          class=""
+          width="40"
+          height="40"
           aria-label="переключатель мбильного меню"
         >
           <use
             class="icon-open"
             href="./images/icons/sprite.svg#icon-burger-menu"
           ></use>
+          <use
+            class="icon-close"
+            href="./images/icons/sprite.svg#icon-close-menu"
+          ></use>
         </svg>
       </button>
-
-      <div class="menu-container" id="menu-container">
-        <div class="container">
-          <div class="mobile-header">
-            <a href="#" class="logo">
-              <img src="./images/logo-raster/logo-white.png" alt="" />
+      <div class="menu-container" id="menu-container" data-menu>
+        <div class="menu-burger container">
+          <div class="header-burger">
+            <a href="#" class="logo-burger">
+              <picture>
+                <source
+                  srcset="
+                    ./images/logo-raster/logo-tablet-white@1x.png 1x,
+                    ./images/logo-raster/logo-tablet-white@2x.png 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/logo-raster/logo-mobile-white@1x.png 1x,
+                    ./images/logo-raster/logo-mobile-white@2x.png 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/logo-raster/logo-tablet-white@1x.png"
+                  alt="логотип компании"
+                />
+              </picture>
             </a>
-            <button class="menu-btn" type="button">
-              <svg
-                width="20"
-                height="13"
-                aria-label="переключатель мбильного меню"
-              >
-                <use
-                  class="icon-close"
-                  href="./images/icons/sprite.svg#icon-close-menu"
-                ></use>
-              </svg>
-            </button>
           </div>
-
           <ul class="site-nav">
             <li class="item">
               <a class="link nav-link" href="#">Программы обучения</a>
@@ -142,14 +153,12 @@
                 >Контакты
               </a>
             </li>
-            <li class="item">
-              <a class="link nav-link" href="" rel="noopener noreferrer"
-                >Консультация по телефону
-              </a>
-            </li>
           </ul>
+          <a class="button burger-button" href="" rel="noopener noreferrer"
+            >Консультация по телефону
+          </a>
 
-          <button class="button">хочу на бесплатное занятие</button>
+          <!-- <button class="button tablet">хочу на бесплатное занятие</button> -->
         </div>
       </div>
     </nav>

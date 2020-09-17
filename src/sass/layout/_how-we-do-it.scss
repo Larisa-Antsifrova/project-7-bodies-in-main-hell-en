@@ -5,6 +5,14 @@
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.03em;
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+    @media screen and (min-width: 1344px) {
+      text-align: left;
+      font-size: 46px;
+      margin-bottom: 50px;
+    }
   }
 
   .title-how-we-do {
@@ -13,6 +21,10 @@
     letter-spacing: 0.08em;
     text-align: center;
 
+    @media screen and (min-width: 1334px) {
+      font-size: 20px;
+    }
+
     &::after {
       content: ' ';
       display: block;
@@ -20,6 +32,15 @@
       height: 2px;
       background-color: $accentColor;
       margin: 20px auto;
+      transition-property: background-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .list {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -30,6 +51,11 @@
     text-align: center;
     letter-spacing: 0.08em;
     color: $primaryTextColor;
+
+    @media screen and (min-width: 1334px) {
+      font-size: 18px;
+      line-height: 1.55;
+    }
   }
 
   .item {
@@ -39,9 +65,35 @@
     padding: 30px 10px 22px 10px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
+    @media screen and (min-width: 768px) and (max-width: 1333px) {
+      width: calc((100% - 20px) / 2);
+      padding: 40px 21px 30px 21px;
+
+      &:nth-child(2n + 1) {
+        margin-right: 20px;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 27px;
+      }
+    }
+
+    @media screen and (min-width: 1344px) {
+      width: calc((100% - 40px) / 3);
+      padding: 40px 30px 55px 30px;
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 20px;
+      }
+
+      &:not(:nth-child(3n)) {
+        margin-right: 20px;
+      }
     }
 
     .icon {
