@@ -24,9 +24,24 @@
         justify-content: center;
         margin-left: 40px;
       }
+      .nav-link {
+        padding-top: 27px;
+        padding-bottom: 27px;
+      }
     }
   }
 }
+
+.link:hover,
+.link:focus {
+  color: $accentColor;
+}
+
+.link-orange:hover,
+.link-orange:focus {
+  color: $primaryTextColor;
+}
+
 // Скрыть эелементы header при открытом бургере
 .menu-btn {
   z-index: 5;
@@ -110,22 +125,28 @@
 }
 
 .site-nav {
-  margin-top: 50px;
-  margin-bottom: 50px;
-
   .item {
     @include font(800, 20px, 1.8, 0.03em);
     color: $basicWhiteColor;
   }
-  .item:not(:last-child) {
-    margin-bottom: 10px;
-  }
   .item:nth-child(2) {
     color: $accentColor;
   }
-  @media screen and (min-width: 768px) {
+
+  @media screen and (max-width: 1344px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1344px) {
     margin-top: 72px;
     margin-left: 218px;
+  }
+  @media screen and (min-width: 768px) {
     .item {
       font-size: 26px;
     }
@@ -153,10 +174,10 @@
   cursor: pointer;
   transition: fill $primaryTransition;
 
-  // &:hover,
-  // &:focus {
-  //   fill: $accentColor;
-  // }
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
 
   .icon-close {
     fill: $basicWhiteColor;
