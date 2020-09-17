@@ -21,48 +21,86 @@
   }
 }
 // Скрыть эелементы header при открытом бургере
-.logo.is-open {
-  opacity: 0;
-}
-.menu-btn.is-open {
-  opacity: 0;
+.menu-btn {
+  z-index: 5;
 }
 
 // Стили бургер хедера
 .header-burger {
   display: flex;
-  padding-top: 30px;
+  padding-top: 40px;
   text-align: center;
   justify-content: space-between;
 
   @media (min-width: 768px) {
-    padding-top: 42px;
+    padding-top: 30px;
   }
 }
 
 .menu-container {
-  // display: none;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
-  background-color: $burgerMenuBackgroundColor;
+  @media (max-width: 1344px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background-color: $burgerMenuBackgroundColor;
 
-  // Дополнительные стили на кнопку в бургере
-  .button {
-    margin-right: auto;
-    margin-left: auto;
-    background-color: transparent;
-    color: $accentColor;
+    &.is-open {
+      display: block;
+    }
+    .menu-btn {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: fill $primaryTransition;
 
-    @media screen and (min-width: 768px) {
+      &:hover,
+      &:focus {
+        fill: $accentColor;
+      }
+
+      .icon-close {
+        fill: $basicWhiteColor;
+      }
+
+      .menu-btn .icon-close {
+        display: none;
+      }
+
+      .menu-btn.is-open .icon-close {
+        display: block;
+      }
+      .menu-btn.is-open .icon-open {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-left: 40px;
+      }
+
+      @media (min-width: 1344px) {
+        display: none;
+      }
+    }
+
+    // Дополнительные стили на кнопку в бургере
+    .button {
+      margin-right: auto;
+      margin-left: auto;
+      background-color: transparent;
+      color: $accentColor;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    @media (min-width: 1330px) {
       display: none;
     }
-  }
-  @media (min-width: 1330px) {
-    display: none;
   }
 }
 
@@ -115,6 +153,18 @@
   .icon-close {
     fill: $basicWhiteColor;
   }
+
+  .menu-btn .icon-close {
+    display: none;
+  }
+
+  .menu-btn.is-open .icon-close {
+    display: block;
+  }
+  .menu-btn.is-open .icon-open {
+    display: none;
+  }
+
   @media screen and (min-width: 768px) {
     margin-left: 40px;
   }
@@ -122,15 +172,4 @@
   @media (min-width: 1344px) {
     display: none;
   }
-
-  // .menu-btn .icon-close {
-  //   display: block;
-  // }
-
-  // .menu-btn.is-open .icon-close {
-  //   display: block;
-  // }
-  // .menu-btn.is-open .icon-open {
-  //   display: none;
-  // }
 }
