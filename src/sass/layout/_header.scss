@@ -27,6 +27,17 @@
     }
   }
 }
+
+.link:hover,
+.link:focus {
+  color: $accentColor;
+}
+
+.link-orange:hover,
+.link-orange:focus {
+  color: $primaryTextColor;
+}
+
 // Скрыть эелементы header при открытом бургере
 .menu-btn {
   z-index: 5;
@@ -153,10 +164,10 @@
   cursor: pointer;
   transition: fill $primaryTransition;
 
-  // &:hover,
-  // &:focus {
-  //   fill: $accentColor;
-  // }
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
 
   .icon-close {
     fill: $basicWhiteColor;
