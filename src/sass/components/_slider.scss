@@ -3,24 +3,20 @@
 }
 
 .slider-container {
+  display: flex;
   outline: 2px solid tomato;
-  width: 60%;
-  margin-right: auto;
+  width: 100%;
   margin-left: auto;
-  overflow: hidden;
+  margin-right: auto;
 }
 
 .slide {
   display: flex;
-  align-items: flex-start;
   width: 100%;
-  height: 568px;
 }
 
 .slider-item {
-  width: 280px;
-  height: auto;
-
+  width: 100%;
   background-color: #fff;
 }
 
