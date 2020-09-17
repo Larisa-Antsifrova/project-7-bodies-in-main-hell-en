@@ -1,3 +1,13 @@
+.warranty-section {
+  @media screen and (max-width: 767px) {
+    background: linear-gradient(
+      to bottom,
+      $basicWhiteColor 18%,
+      $lightBackgroundColor 18%
+    );
+  }
+}
+
 .warranty-section h2 {
   margin-bottom: 30px;
 
@@ -14,7 +24,9 @@
 }
 
 .background-list-color {
-  background: $lightBackgroundColor;
+  @media screen and (min-width: 768px) {
+    background: $lightBackgroundColor;
+  }
 }
 
 .warranty-list {
@@ -53,10 +65,10 @@
     // margin-bottom: 5px;
 
     @media screen and (min-width: 768px) {
-      height: 30px;
+      height: 100%;
     }
     @media screen and (min-width: 1344px) {
-      height: 40px;
+      height: 100%;
     }
   }
 
