@@ -5,6 +5,9 @@
     margin-bottom: 30px;
     text-align: center;
     letter-spacing: 0.03em;
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   .title-how-we-do {
@@ -20,6 +23,12 @@
       height: 2px;
       background-color: $accentColor;
       margin: 20px auto;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .list {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -39,9 +48,22 @@
     padding: 30px 10px 22px 10px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 20px) / 2);
+
+      &:nth-child(2n + 1) {
+        margin-right: 20px;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 27px;
+      }
     }
 
     .icon {
