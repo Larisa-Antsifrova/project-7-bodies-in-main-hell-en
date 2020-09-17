@@ -1,18 +1,31 @@
-.warranty-section {
-  background-color: $lightBackgroundColor;
-}
-
 .warranty-section h2 {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
   font-size: 26px;
   line-height: 1.3;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1344px) {
+    font-size: 46px;
+    line-height: 1.3;
+    margin-bottom: 50px;
+  }
 }
 
-.warranty-section ul {
-  padding-left: 20px;
+.background-list-color {
+  background: $lightBackgroundColor;
+}
+
+.warranty-list {
+  padding: 30px 20px 30px 20px;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 50px 30px 79px;
+  }
+  @media screen and (min-width: 1344px) {
+    padding: 50px 112px 45px 112px;
+  }
 }
 
 .warranty-section li {
@@ -53,6 +66,10 @@
 }
 
 .warranty-list li {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.7;
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 23px;
@@ -62,5 +79,9 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+  @media screen and (min-width: 1344px) {
+    font-size: 20px;
+    line-height: 1.4;
   }
 }
