@@ -162,14 +162,14 @@
     fill: $basicWhiteColor;
   }
 
-  .menu-btn .icon-close {
+  .icon-close {
     display: none;
   }
 
-  .menu-btn.is-open .icon-close {
+  &.is-open .icon-close {
     display: block;
   }
-  .menu-btn.is-open .icon-open {
+  &.is-open .icon-open {
     display: none;
   }
 
