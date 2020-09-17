@@ -37,11 +37,6 @@
   color: $accentColor;
 }
 
-.link-orange:hover,
-.link-orange:focus {
-  color: $primaryTextColor;
-}
-
 // Скрыть эелементы header при открытом бургере
 .menu-btn {
   z-index: 5;
@@ -128,9 +123,6 @@
   .item {
     @include font(800, 20px, 1.8, 0.03em);
     color: $basicWhiteColor;
-  }
-  .item:nth-child(2) {
-    color: $accentColor;
   }
 
   @media screen and (max-width: 1344px) {
