@@ -28,10 +28,14 @@ prevBtn.addEventListener('click', () => {
 });
 
 carouselSlide.addEventListener('transitionend', () => {
-  console.log(carouselItems[counter]);
   if (carouselItems[counter].id === 'lastClone') {
     carouselSlide.style.transition = 'none';
     counter = carouselItems.length - 2;
+    carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
+  }
+  if (carouselItems[counter].id === 'firstClone') {
+    carouselSlide.style.transition = 'none';
+    counter = carouselItems.length - counter;
     carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
   }
 });
