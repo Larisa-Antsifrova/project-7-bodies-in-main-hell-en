@@ -3,15 +3,16 @@
   margin-right: auto;
   padding: 0;
 
+  min-width: 320px;
+  height: 507px;
+
+  background-image: url(../images/footer-bcg/footer-bcg-mobile@1x.png);
+  background-color: $darkBackgrounColor;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   @media screen and (min-width: 320px) {
-    min-width: 320px;
-    height: 507px;
-    background-image: url(../images/footer-bcg/footer-bcg-mobile@1x.png);
-    background-color: $darkBackgrounColor;
   }
 }
 
