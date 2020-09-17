@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/custom-slider.js"],"names":["$","document","ready","slick"],"mappings":"AAAAA,CAAC,CAACC,QAAD,CAAD,CAAYC,KAAZ,CAAkB,YAAY;AAC5BF,EAAAA,CAAC,CAAC,mBAAD,CAAD,CAAuBG,KAAvB;AACD,CAFD","file":"custom-slider.a276e76b.js","sourceRoot":"..\\src","sourcesContent":["$(document).ready(function () {\r\n  $('.slider-container').slick();\r\n});\r\n"]}

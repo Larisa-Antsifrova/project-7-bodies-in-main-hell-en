@@ -117,15 +117,50 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/menu.js":[function(require,module,exports) {
+})({"js/ancore.js":[function(require,module,exports) {
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//ANCHOR
 (function () {
-  var menuBtnRef = document.querySelector('[data-menu-button]');
-  var mobileMenuRef = document.querySelector('[data-menu]');
-  menuBtnRef.addEventListener('click', function () {
-    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-    menuBtnRef.classList.toggle('is-open');
-    menuBtnRef.setAttribute('aria-expanded', !expanded);
-    mobileMenuRef.classList.toggle('is-open');
+  // собираем все якоря; устанавливаем время анимации и количество кадров
+  var anchors = _toConsumableArray(document.querySelectorAll('a[href*="#"]')),
+      animationTime = 1000,
+      framesCount = 60;
+
+  anchors.forEach(function (item) {
+    // каждому якорю присваиваем обработчик события
+    item.addEventListener('click', function (e) {
+      // убираем стандартное поведение
+      e.preventDefault(); // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
+
+      var coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset; // запускаем интервал, в котором
+
+      var scroller = setInterval(function () {
+        // считаем на сколько скроллить за 1 такт
+        var scrollBy = coordY / framesCount; // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
+        // и дно страницы не достигнуто
+
+        if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+          // то скроллим на к-во пикселей, которое соответствует одному такту
+          window.scrollBy(0, scrollBy);
+        } else {
+          // иначе добираемся до элемента и выходим из интервала
+          window.scrollTo(0, coordY);
+          clearInterval(scroller);
+        } // время интервала равняется частному от времени анимации и к-ва кадров
+
+      }, animationTime / framesCount);
+    });
   });
 })();
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -332,5 +367,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
-//# sourceMappingURL=/menu.0c91648c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/ancore.js"], null)
+//# sourceMappingURL=/ancore.ecc2d376.js.map

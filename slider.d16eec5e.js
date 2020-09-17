@@ -117,17 +117,44 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/menu.js":[function(require,module,exports) {
-(function () {
-  var menuBtnRef = document.querySelector('[data-menu-button]');
-  var mobileMenuRef = document.querySelector('[data-menu]');
-  menuBtnRef.addEventListener('click', function () {
-    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-    menuBtnRef.classList.toggle('is-open');
-    menuBtnRef.setAttribute('aria-expanded', !expanded);
-    mobileMenuRef.classList.toggle('is-open');
-  });
-})();
+})({"js/slider.js":[function(require,module,exports) {
+var carouselSlide = document.querySelector('.slide');
+var carouselItems = document.querySelectorAll('.slide .slider-item'); // Buttons
+
+var prevBtn = document.querySelector('#prevBtn');
+var nextBtn = document.querySelector('#nextBtn'); // Counter
+
+var counter = 1;
+var size = carouselItems[0].clientWidth;
+carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)'; // Button listeners
+
+nextBtn.addEventListener('click', function () {
+  if (counter >= carouselItems.length - 1) return;
+  carouselSlide.style.transition = 'transform 500ms ease-in-out';
+  counter++;
+  console.log(counter);
+  carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
+});
+prevBtn.addEventListener('click', function () {
+  if (counter <= 0) return;
+  carouselSlide.style.transition = 'transform 250ms ease-in-out';
+  counter--;
+  console.log(counter);
+  carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
+});
+carouselSlide.addEventListener('transitionend', function () {
+  if (carouselItems[counter].id === 'lastClone') {
+    carouselSlide.style.transition = 'none';
+    counter = carouselItems.length - 2;
+    carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
+  }
+
+  if (carouselItems[counter].id === 'firstClone') {
+    carouselSlide.style.transition = 'none';
+    counter = carouselItems.length - counter;
+    carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
+  }
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -332,5 +359,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
-//# sourceMappingURL=/menu.0c91648c.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/slider.js"], null)
+//# sourceMappingURL=/slider.d16eec5e.js.map
