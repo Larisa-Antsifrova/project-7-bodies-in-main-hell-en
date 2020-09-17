@@ -168,12 +168,29 @@
     padding-top: 30px;
     text-align: center;
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .logo-footer {
   display: inline-block;
   text-align: center;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.address-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
 }
 
 .contacts-phone {
@@ -189,6 +206,10 @@
   &:hover .contacts-link {
     color: $accentColor;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 48px;
+  }
 }
 
 .contacts-icon {
@@ -203,6 +224,17 @@
   text-align: center;
 }
 
+.instagram-link::before {
+  @media screen and (min-width: 768px) {
+    content: '';
+    display: block;
+    border-left: 1px solid $primaryTextColor;
+    height: 40px;
+    position: absolute;
+    right: 64px;
+  }
+}
+
 .copy-block {
   background-color: $darkBackgrounColor;
 }
@@ -213,7 +245,10 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 2;
-  text-align: center;
 
   color: $primaryTextColor;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
