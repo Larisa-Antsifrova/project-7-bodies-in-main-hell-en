@@ -1,5 +1,5 @@
 const carouselSlide = document.querySelector('.slide');
-const carouselItems = document.querySelectorAll('.slide div');
+const carouselItems = document.querySelectorAll('.slide .slider-item');
 
 // Buttons
 const prevBtn = document.querySelector('#prevBtn');
