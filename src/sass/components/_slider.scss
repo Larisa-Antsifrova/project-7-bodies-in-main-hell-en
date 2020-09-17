@@ -24,7 +24,7 @@
 
 .slider-item {
   width: 100%;
-  background-color: #fff;
+  background-color: $basicWhiteColor;
   min-width: 280px;
 
   @media screen and (max-width: 767px) {
@@ -37,14 +37,14 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-between;
     min-width: 688px;
     padding: 40px;
   }
 }
 
-.slider-item-image {
+.slider-item-image-block {
   text-align: center;
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 20px) / 3);
     margin-right: 20px;
@@ -53,6 +53,8 @@
 
 .slider-client-image {
   @media screen and (max-width: 767px) {
+    width: 90px;
+    height: 90px;
     margin: 0 auto;
   }
   @media screen and (min-width: 768px) {
@@ -81,12 +83,11 @@
 }
 
 .slider-icon {
-  display: inline-block;
   width: 30px;
   height: 30px;
 }
 
-.slider-item-description {
+.slider-item-description-block {
   @media screen and (min-width: 768px) {
     width: calc(100% - (100% - 20px) / 3);
   }
@@ -94,6 +95,7 @@
 
 .slider-item-title {
   font-weight: 800;
+  font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.08em;
 
@@ -101,7 +103,6 @@
 
   @media screen and (max-width: 767px) {
     margin-bottom: 10px;
-    font-size: 14px;
   }
 
   @media screen and (min-width: 768px) {
@@ -155,14 +156,3 @@
   width: 25px;
   height: 25px;
 }
-
-// .slider-nav {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .slider-arrow-icon {
-//   width: 25px;
-//   height: 25px;
-// }
