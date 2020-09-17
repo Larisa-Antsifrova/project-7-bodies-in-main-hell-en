@@ -1,11 +1,12 @@
 .hero-section {
-  // position: relative;
+  position: relative;
   background-image: url(../images/hero-bg/hero-bg-mobile@1x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -70px;
+  max-width: 100%;
+  width: 100%;
   background-color: #0000000a;
-  box-shadow: -5px 21px 26px hsla(0, 0%, 0%, 0.04);
 
   .img {
     margin-left: auto;
@@ -32,9 +33,11 @@
   }
   @media screen and (min-width: 768px) {
     background-image: url(../images/hero-bg/hero-bg-tablet@1x.png);
+    background-position-y: -200px;
   }
   @media screen and (min-width: 1344px) {
-    background-image: url(../images/hero-bg/hero-bg-tablet@1x.png);
+    background-image: url(../images/hero-bg/hero-bg-desktop@1x.png);
+    background-position-y: -300px;
   }
 }
 
