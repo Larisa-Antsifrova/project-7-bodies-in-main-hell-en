@@ -18,6 +18,13 @@
       background-color: transparent;
       color: $accentColor;
     }
+    @media screen and (min-width: 1344px) {
+      .header-link {
+        display: flex;
+        justify-content: center;
+        margin-left: 40px;
+      }
+    }
   }
 }
 // Скрыть эелементы header при открытом бургере
@@ -35,72 +42,70 @@
   @media (min-width: 768px) {
     padding-top: 30px;
   }
+  @media (min-width: 1344px) {
+    display: none;
+  }
 }
 
 .menu-container {
-  @media (max-width: 1344px) {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background-color: $burgerMenuBackgroundColor;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: $burgerMenuBackgroundColor;
 
-    &.is-open {
-      display: block;
-    }
-    .menu-btn {
-      display: inline-block;
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      transition: fill $primaryTransition;
+  &.is-open {
+    display: block;
+  }
 
-      &:hover,
-      &:focus {
-        fill: $accentColor;
-      }
+  .menu-btn {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: fill $primaryTransition;
 
-      .icon-close {
-        fill: $basicWhiteColor;
-      }
-
-      .menu-btn .icon-close {
-        display: none;
-      }
-
-      .menu-btn.is-open .icon-close {
-        display: block;
-      }
-      .menu-btn.is-open .icon-open {
-        display: none;
-      }
-
-      @media screen and (min-width: 768px) {
-        margin-left: 40px;
-      }
-
-      @media (min-width: 1344px) {
-        display: none;
-      }
+    &:hover,
+    &:focus {
+      fill: $accentColor;
     }
 
-    // Дополнительные стили на кнопку в бургере
-    .button {
-      margin-right: auto;
-      margin-left: auto;
-      background-color: transparent;
-      color: $accentColor;
-
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
-    }
-    @media (min-width: 1330px) {
+    .menu-btn .icon-close {
       display: none;
     }
+
+    .menu-btn.is-open .icon-close {
+      display: block;
+    }
+    .menu-btn.is-open .icon-open {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: 1344px) {
+      display: none;
+    }
+  }
+
+  // Дополнительные стили на кнопку в бургере
+  .button {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
+    color: $accentColor;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  @media (min-width: 1330px) {
+    display: none;
   }
 }
 
@@ -135,6 +140,9 @@
       color: $primaryTextColor;
       text-transform: uppercase;
     }
+    .item:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 }
 
@@ -145,10 +153,10 @@
   cursor: pointer;
   transition: fill $primaryTransition;
 
-  &:hover,
-  &:focus {
-    fill: $accentColor;
-  }
+  // &:hover,
+  // &:focus {
+  //   fill: $accentColor;
+  // }
 
   .icon-close {
     fill: $basicWhiteColor;
@@ -172,4 +180,13 @@
   @media (min-width: 1344px) {
     display: none;
   }
+}
+
+.container-tablet {
+  @media screen and (max-width: 1344px) {
+    display: none;
+  }
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
