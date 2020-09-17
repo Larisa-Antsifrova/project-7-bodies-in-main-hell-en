@@ -1,17 +1,26 @@
+.slider-section {
+  background-color: teal;
+}
+
 .slider {
-  width: 100%;
   max-width: 280px;
   min-height: 564px;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+  // border: 5px solid teal;
 }
 
 .slide {
+  display: flex;
+  // width: 100%;
 }
 
 .slider-item {
   width: 280px;
+  height: 564px;
   padding: 20px;
+  background-color: $basicWhiteColor;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
 
