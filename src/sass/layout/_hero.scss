@@ -1,21 +1,56 @@
 .hero-section {
   position: relative;
-  background-image: url(../images/icons/bcg/wave-curve.svg);
+  background-image: url(../images/hero-bg/hero-bg-mobile@1x.png);
   background-size: cover;
-  z-index: -1;
-
-  .button {
-    display: block;
-    margin-right: auto;
-    margin-bottom: 36px;
-    margin-left: auto;
-  }
+  background-repeat: no-repeat;
+  background-position-y: -70px;
+  max-width: 100%;
+  width: 100%;
+  background-color: #0000000a;
 
   .img {
     margin-left: auto;
     margin-right: auto;
   }
+  .button {
+    display: block;
+
+    &:focus,
+    &:hover {
+      fill: $accentColor;
+      background-color: $basicWhiteColor;
+    }
+  }
+  .hero-content:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      padding-bottom: 36px;
+
+      .button {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero-bg/hero-bg-tablet@1x.png);
+    background-position-y: -200px;
+  }
+  @media screen and (min-width: 1344px) {
+    background-image: url(../images/hero-bg/hero-bg-desktop@1x.png);
+    background-position-y: -300px;
+  }
 }
+
+.hero-container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    .hero-content {
+      width: 50%;
+    }
+  }
+}
+
 .hero-title {
   @include font(800, 20px, 1.35, 0.03em);
   color: $primaryTitleColor;
@@ -24,18 +59,29 @@
   .hero-label {
     display: block;
   }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1344px) {
+    font-size: 58px;
+  }
 }
 
 .hero-description {
   margin-bottom: 30px;
   @include font(700, 14px, 1.57, 0.08em);
+
   .grey-color {
     display: block;
     font-weight: 500;
     color: $primaryTextColor;
   }
+
   .orange-color {
     color: $accentColor;
+  }
+  @media screen and (min-width: 1344px) {
+    font-size: 20px;
   }
 }
 
