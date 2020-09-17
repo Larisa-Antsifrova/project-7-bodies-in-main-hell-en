@@ -14,13 +14,15 @@ carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
 // Button listeners
 
 nextBtn.addEventListener('click', () => {
-  carouselSlide.style.transition = 'transform 250ms ease-in-out';
+  if (counter >= carouselItems.length - 1) return;
+  carouselSlide.style.transition = 'transform 500ms ease-in-out';
   counter++;
   console.log(counter);
   carouselSlide.style.transform = 'translateX(' + -size * counter + 'px)';
 });
 
 prevBtn.addEventListener('click', () => {
+  if (counter <= 0) return;
   carouselSlide.style.transition = 'transform 250ms ease-in-out';
   counter--;
   console.log(counter);
