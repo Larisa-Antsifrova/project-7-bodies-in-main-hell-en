@@ -20,11 +20,24 @@
     }
   }
 }
+// Скрыть эелементы header при открытом бургере
+.logo.is-open {
+  opacity: 0;
+}
+.menu-btn.is-open {
+  opacity: 0;
+}
+
+// Стили бургер хедера
 .header-burger {
   display: flex;
   padding-top: 30px;
   text-align: center;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    padding-top: 42px;
+  }
 }
 
 .menu-container {
@@ -34,38 +47,51 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100hv;
+  height: 100%;
   background-color: $burgerMenuBackgroundColor;
 
+  // Дополнительные стили на кнопку в бургере
+  .button {
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
+    color: $accentColor;
+  }
   @media (min-width: 1330px) {
     display: none;
   }
 }
 
-// .site-nav {
-//   // display: none;
-//   .item {
-//     @include font(800, 20px, 1.8, 0.03em);
-//     color: $basicWhiteColor;
-//   }
-//   .item:not(:last-child) {
-//     margin-bottom: 10px;
-//   }
-//   .item:nth-child(2) {
-//     color: $accentColor;
-//   }
-//   @media screen and (min-width: 1344px) {
-//     display: flex;
-//     margin-right: auto;
-//     margin-left: auto;
+.site-nav {
+  margin-top: 50px;
+  margin-bottom: 50px;
 
-//     .item {
-//       @include font(700, 14px, 1.2, 0.03em);
-//       color: $primaryTextColor;
-//       text-transform: uppercase;
-//     }
-//   }
-// }
+  .item {
+    @include font(800, 20px, 1.8, 0.03em);
+    color: $basicWhiteColor;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .item:nth-child(2) {
+    color: $accentColor;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 72px;
+    margin-left: 218px;
+  }
+  @media screen and (min-width: 1344px) {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+
+    .item {
+      @include font(700, 14px, 1.2, 0.03em);
+      color: $primaryTextColor;
+      text-transform: uppercase;
+    }
+  }
+}
 
 .menu-btn {
   display: inline-block;
@@ -90,14 +116,14 @@
     display: none;
   }
 
-  .menu-btn .icon-close {
-    display: block;
-  }
+  // .menu-btn .icon-close {
+  //   display: block;
+  // }
 
-  .menu-btn.is-open .icon-close {
-    display: block;
-  }
-  .menu-btn.is-open .icon-open {
-    display: none;
-  }
+  // .menu-btn.is-open .icon-close {
+  //   display: block;
+  // }
+  // .menu-btn.is-open .icon-open {
+  //   display: none;
+  // }
 }

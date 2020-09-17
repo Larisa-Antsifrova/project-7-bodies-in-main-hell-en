@@ -2,7 +2,8 @@
 <header class="page-header">
   <div class="container">
     <nav class="nav">
-      <a href="#" class="logo">
+      <!-- дать доп. класс is-open -->
+      <a href="#" class="logo is-open">
         <picture class="logo-universal">
           <source
             srcset="
@@ -83,8 +84,9 @@
       <a class="header-link button" href="" rel="noopener noreferrer"
         >Консультация по телефону
       </a> -->
+      <!-- дать доп. класс is-open -->
       <button
-        class="menu-btn"
+        class="menu-btn is-open"
         type="button"
         aria-expanded="false"
         aria-controls="menu-container"
@@ -107,7 +109,28 @@
         <div class="menu-burger container">
           <div class="header-burger">
             <a href="#" class="logo-burger">
-              <img src="./images/logo-raster/logo-white.png" alt="" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/logo-raster/logo-tablet-white@1x.png 1x,
+                    ./images/logo-raster/logo-tablet-white@2x.png 2x
+                  "
+                  media="(min-width:768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/logo-raster/logo-mobile-white@1x.png 1x,
+                    ./images/logo-raster/logo-mobile-white@2x.png 2x
+                  "
+                  media="(min-width:320px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/logo-raster/logo-tablet-white@1x.png"
+                  alt="логотип компании"
+                />
+              </picture>
             </a>
             <button class="menu-btn" type="button">
               <svg
@@ -122,7 +145,7 @@
               </svg>
             </button>
           </div>
-          <ul class="site-nav-mobile">
+          <ul class="site-nav">
             <li class="item">
               <a class="link nav-link" href="#">Программы обучения</a>
             </li>
@@ -141,14 +164,12 @@
                 >Контакты
               </a>
             </li>
-            <li class="item">
-              <a class="link nav-link" href="" rel="noopener noreferrer"
-                >Консультация по телефону
-              </a>
-            </li>
           </ul>
+          <a class="button burger-button" href="" rel="noopener noreferrer"
+            >Консультация по телефону
+          </a>
 
-          <button class="button">хочу на бесплатное занятие</button>
+          <button class="button tablet">хочу на бесплатное занятие</button>
         </div>
       </div>
     </nav>
