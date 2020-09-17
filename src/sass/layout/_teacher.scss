@@ -4,12 +4,12 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 50px;
-    padding-bottom: 0;
+    padding-bottom: 50px;
   }
 
   @media screen and (min-width: 1344px) {
     padding-top: 130px;
-    padding-bottom: 0;
+    padding-bottom: 130px;
   }
 }
 
@@ -141,6 +141,11 @@
   background-color: $accentColor;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1344px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .experience-text {
@@ -152,8 +157,16 @@
 
   color: $primaryTextColor;
 
-  &:last-child {
-    margin-bottom: 10px;
+  @media screen and (max-width: 1343px) {
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1344px) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.56;
   }
 }
 
@@ -164,4 +177,9 @@
 
   text-decoration-line: underline;
   color: $accentColor;
+
+  @media screen and (min-width: 1344px) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
 }
