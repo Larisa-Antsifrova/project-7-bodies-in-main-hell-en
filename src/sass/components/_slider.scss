@@ -1,6 +1,11 @@
-// .slider-section {
-//   background-color: teal;
-// }
+.slider-title {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
 
 .slider-container {
   width: 100%;
@@ -13,66 +18,120 @@
 
 .slide {
   display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
 .slider-item {
   width: 100%;
+  background-color: $basicWhiteColor;
   min-width: 280px;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 30px;
-  background-color: #fff;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    min-width: 688px;
+    padding: 40px;
+  }
 }
 
-.slider-title {
-  margin-bottom: 20px;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.3;
+.slider-item-image-block {
   text-align: center;
-  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 20px) / 3);
+    margin-right: 20px;
+  }
 }
 
 .slider-client-image {
-  margin: 0 auto;
+  @media screen and (max-width: 767px) {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 768px) {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+}
+
+.slider-social-link {
+  display: inline-flex;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color $primaryTransition;
+
+  &:hover,
+  &:focus {
+    background-color: $lightBackgroundColor;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 }
 
 .slider-icon {
-  display: block;
   width: 30px;
   height: 30px;
-  margin: 20px auto;
+}
+
+.slider-item-description-block {
+  @media screen and (min-width: 768px) {
+    width: calc(100% - (100% - 20px) / 3);
+  }
 }
 
 .slider-item-title {
-  margin-bottom: 10px;
   font-weight: 800;
   font-size: 14px;
   line-height: 1.2;
-  text-align: center;
   letter-spacing: 0.08em;
 
   color: $accentColor;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
 }
 
 .slider-client-description {
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.25;
-  text-align: center;
   letter-spacing: 0.08em;
 
   color: $primaryTextColor;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
 }
 
 .slider-feedback {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.67;
-  text-align: center;
 
   color: $secondaryTextColor;
 }
@@ -97,14 +156,3 @@
   width: 25px;
   height: 25px;
 }
-
-// .slider-nav {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .slider-arrow-icon {
-//   width: 25px;
-//   height: 25px;
-// }
