@@ -2,6 +2,7 @@
   background: $darkBackgrounColor;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     padding-top: 60px;
@@ -163,7 +164,7 @@
   position: relative;
   padding: 0;
   text-align: center;
-  padding-left: 60px;
+  padding-left: 100px;
 
   @media screen and (min-width: 768px) {
     padding-left: 110px;
@@ -175,7 +176,6 @@
 }
 
 .program-box .title-flex {
-
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -223,6 +223,25 @@
     top: 277px;
   } 
 
+}
+
+.program-image {
+  position:absolute;
+
+  @media screen and (max-width: 767px) {
+    bottom: -95px;
+    left: 180px;
+    z-index: 999999;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: -135px;
+    right: -31px;
+  }
+  @media screen and (min-width: 1344px) {
+    bottom: -200px;
+    right: 780px;
+  }
 }
     
   
