@@ -27,9 +27,13 @@
       .nav-link {
         padding-top: 27px;
         padding-bottom: 27px;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
     }
   }
+}
+.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
@@ -70,38 +74,6 @@
 
   &.is-open {
     display: block;
-  }
-
-  .menu-btn {
-    display: inline-block;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: fill $primaryTransition;
-
-    &:hover,
-    &:focus {
-      fill: $accentColor;
-    }
-
-    .menu-btn .icon-close {
-      display: none;
-    }
-
-    .menu-btn.is-open .icon-close {
-      display: block;
-    }
-    .menu-btn.is-open .icon-open {
-      display: none;
-    }
-
-    @media screen and (min-width: 768px) {
-      margin-left: 40px;
-    }
-
-    @media (min-width: 1344px) {
-      display: none;
-    }
   }
 
   // Дополнительные стили на кнопку в бургере
@@ -165,15 +137,24 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transition: fill $primaryTransition;
 
-  &:hover,
-  &:focus {
+  .icon-burger {
+    fill: $primaryTransition;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .icon-close {
+      fill: $basicWhiteColor;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  &:hover .icon-burger,
+  &:focus .icon-burger {
     fill: $accentColor;
   }
 
-  .icon-close {
-    fill: $basicWhiteColor;
+  &:hover .icon-close,
+  &:focus .icon-close {
+    fill: $accentColor;
   }
 
   .icon-close {
