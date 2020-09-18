@@ -4,6 +4,5 @@ $(document).ready(function () {
     infinite: true,
     speed: 700,
     slidesToShow: 1,
-    autoplay: true,
   });
 });
