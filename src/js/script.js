@@ -1,3 +1,9 @@
 $(document).ready(function () {
-  $('.slider-container').slick({});
+  $('.slider-container').slick({
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 1,
+    autoplay: true,
+  });
 });
