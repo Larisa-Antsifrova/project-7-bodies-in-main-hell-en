@@ -2,44 +2,56 @@
   background: $darkBackgrounColor;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     padding-top: 60px;
-  }  
+  }
 
   @media screen and (min-width: 1344px) {
     padding-top: 120px;
     position: relative;
-  }  
+  }
+}
+
+.program-section::before {
+  @media screen and (min-width: 1344px) {
+    content: '';
+    width: 100%;
+    border-bottom: 1px solid $basicWhiteColor;
+    position: absolute;
+    top: 277px;
+    left: 0px;
+  }
 }
 
 .program-section .section-title {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 1.3;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.3;
 
-    text-align: center;
-    letter-spacing: 0.03em;
+  text-align: center;
+  letter-spacing: 0.03em;
 
-    color: $basicWhiteColor;
+  color: $basicWhiteColor;
 
-    margin-bottom: 43px;
+  margin-bottom: 43px;
 
-    @media screen and (min-width: 768px) {
-      font-size: 26px;
-      text-align: left;
-      margin-bottom: 52px;
-      margin-left: 20px;
-    }
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    text-align: left;
+    margin-bottom: 52px;
+    margin-left: 20px;
+  }
 
-    @media screen and (min-width: 1344px) {
-      font-size: 46px;
-      text-align: left;
-      margin-bottom: 160px;
-      margin-left: 169px;
-    }
+  @media screen and (min-width: 1344px) {
+    font-size: 46px;
+    text-align: left;
+    margin-bottom: 160px;
+    margin-left: 169px;
+  }
 }
 
 .program-title {
@@ -118,13 +130,13 @@
   position: relative;
 
   &::before {
-    @media screen and (max-width:1343px) {
+    @media screen and (max-width: 1343px) {
       content: '';
-    height: 100%;
-    border-left: 1px solid $basicWhiteColor;
-    position: absolute;
-    top: 13px;
-    left: -35px;
+      height: 100%;
+      border-left: 1px solid $basicWhiteColor;
+      position: absolute;
+      top: 13px;
+      left: -35px;
     }
     @media screen and(min-width:1344px) {
       content: '';
@@ -141,41 +153,40 @@
   }
 
   &::after {
-    @media screen and (max-width:1343px) {
+    @media screen and (max-width: 1343px) {
       content: '';
-    background: $accentColor;
-    width: 12px;
-    height: 12px;
-    display: block;
-    border-radius: 50%;
-    position: inherit;
-    top: 20px;
-    left: -40px;
-    z-index: 999;
+      background: $accentColor;
+      width: 12px;
+      height: 12px;
+      display: block;
+      border-radius: 50%;
+      position: inherit;
+      top: 20px;
+      left: -40px;
+      z-index: 999;
     }
   }
-  @media screen and (min-width:1344px) {
+  @media screen and (min-width: 1344px) {
     width: 240px;
   }
- }
+}
 
 .program-section .program-box {
   position: relative;
   padding: 0;
   text-align: center;
-  padding-left: 60px;
+  padding-left: 100px;
 
   @media screen and (min-width: 768px) {
     padding-left: 110px;
-  }  
+  }
   @media screen and (min-width: 1344px) {
     display: flex;
     margin-top: 60px;
-  } 
+  }
 }
 
 .program-box .title-flex {
-
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -201,29 +212,43 @@
   @media screen and (min-width: 1344px) {
     font-size: 18px;
     line-height: 28px;
-    }
-
+  }
 }
 .program-four {
-  @media screen and (min-width:768px){
-        width: 176px;
-        margin-right: 50px;
-      }
+  @media screen and (min-width: 768px) {
+    width: 176px;
+    margin-right: 50px;
   }
+}
 .program-two {
-    @media screen and (min-width:768px){
-          margin-right: 50px;
-        }
-    }
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
+}
 .line-desktop {
   @media screen and (min-width: 1344px) {
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     width: 100%;
     position: absolute;
     top: 277px;
-  } 
-
+  }
 }
-    
-  
 
+.program-image {
+  position: absolute;
+
+  @media screen and (max-width: 767px) {
+    bottom: -95px;
+    left: 180px;
+    z-index: 999999;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: -135px;
+    right: -31px;
+  }
+  @media screen and (min-width: 1344px) {
+    bottom: -200px;
+    right: 780px;
+  }
+}

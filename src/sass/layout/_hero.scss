@@ -1,12 +1,19 @@
 .hero-section {
+  // .hero-background {
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   z-index: -1;
+  // }
   position: relative;
   background-image: url(../images/hero-bg/hero-bg-mobile@1x.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: -70px;
+  background-position-y: -290px;
   max-width: 100%;
   width: 100%;
-  background-color: #0000000a;
 
   .img {
     margin-left: auto;
@@ -21,6 +28,15 @@
       background-color: $basicWhiteColor;
     }
   }
+  .hero-content:last-child {
+    margin-top: 72px;
+    @media screen and (min-width: 768px) {
+      margin-top: 142px;
+    }
+    @media screen and (min-width: 1344px) {
+      width: 100%;
+    }
+  }
   .hero-content:not(:last-child) {
     @media screen and (max-width: 767px) {
       padding-bottom: 36px;
@@ -33,17 +49,18 @@
   }
   @media screen and (min-width: 768px) {
     background-image: url(../images/hero-bg/hero-bg-tablet@1x.png);
-    background-position-y: -200px;
+    background-position-y: -170px;
   }
   @media screen and (min-width: 1344px) {
     background-image: url(../images/hero-bg/hero-bg-desktop@1x.png);
-    background-position-y: -300px;
+    background-position-y: -200px;
   }
 }
 
 .hero-container {
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
 
     .hero-content {
       width: 50%;
