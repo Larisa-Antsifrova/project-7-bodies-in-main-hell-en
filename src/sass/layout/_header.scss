@@ -126,7 +126,7 @@
     color: $basicWhiteColor;
   }
 
-  @media screen and (max-width: 1344px) {
+  @media screen and (max-width: 767px) {
     margin-top: 50px;
     margin-bottom: 50px;
 
@@ -135,7 +135,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1344px) {
+  @media screen and (min-width: 768px) and (max-width: 1343px) {
     margin-top: 72px;
     margin-left: 218px;
   }
