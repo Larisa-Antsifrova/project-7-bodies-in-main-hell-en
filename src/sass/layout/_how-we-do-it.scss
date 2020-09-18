@@ -20,6 +20,7 @@
     line-height: 1.42;
     letter-spacing: 0.08em;
     text-align: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 1334px) {
       font-size: 20px;
@@ -32,9 +33,7 @@
       height: 2px;
       background-color: $accentColor;
       margin: 20px auto;
-      transition-property: background-color;
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   @media screen and (min-width: 768px) {
@@ -51,6 +50,7 @@
     text-align: center;
     letter-spacing: 0.08em;
     color: $primaryTextColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 1334px) {
       font-size: 18px;
@@ -63,8 +63,8 @@
     background-color: $basicWhiteColor;
     box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
     padding: 30px 10px 22px 10px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     @media screen and (max-width: 767px) {
       &:not(:last-child) {
         margin-bottom: 15px;
