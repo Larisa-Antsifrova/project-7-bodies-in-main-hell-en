@@ -166,6 +166,12 @@
 /* Слайдер */
 .slick-slider {
   position: relative;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 1344px) {
+    width: 80%;
+  }
 }
 
 /* Слайдер запущен */
@@ -181,8 +187,6 @@
   overflow: hidden;
   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
 }
-.slick-list.draggable {
-}
 
 /* Лента слайдов */
 .slick-track {
@@ -192,23 +196,23 @@
 
 /* Слайд */
 .slick-slide {
-  padding: 20px 20px 30px 20px;
-}
+  @media screen and (max-width: 767px) {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
 
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 40px;
+  }
 
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
+  @media screen and (min-width: 1344px) {
+    display: flex;
+    padding: 50px;
+  }
 }
 
 /* Стрелка */
@@ -236,10 +240,10 @@
   background-size: contain;
 
   @media screen and (min-width: 768px) {
-    left: -10px;
+    left: -20px;
   }
   @media screen and (min-width: 1344px) {
-    left: 0px;
+    left: -90px;
   }
 }
 
@@ -250,10 +254,10 @@
   background-size: contain;
 
   @media screen and (min-width: 768px) {
-    right: -10px;
+    right: -20px;
   }
   @media screen and (min-width: 1344px) {
-    right: 0px;
+    right: -90px;
   }
 }
 
