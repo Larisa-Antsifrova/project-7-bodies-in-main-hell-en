@@ -114,7 +114,7 @@
   }
 }
 
-.program-section .program-list {
+.program-section .program-list:not(:last-child) {
   margin-bottom: 18px;
   padding-left: 0;
 }
@@ -249,7 +249,7 @@
     right: -31px;
   }
   @media screen and (min-width: 1344px) {
-    bottom: -200px;
+    bottom: -220px;
     right: 780px;
   }
 }
