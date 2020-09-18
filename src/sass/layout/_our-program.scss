@@ -12,6 +12,7 @@
     padding-top: 120px;
     position: relative;
     padding-bottom: 0;
+
   }
 }
 
@@ -114,7 +115,7 @@
   }
 }
 
-.program-section .program-list {
+.program-section .program-list:not(:last-child) {
   margin-bottom: 18px;
   padding-left: 0;
 }
