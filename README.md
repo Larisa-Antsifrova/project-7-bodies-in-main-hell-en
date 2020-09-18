@@ -1,8 +1,28 @@
-# parcel-project-template
+# HELLEN HTML/CSS Final Project
+
+## Team 7
+
+### Contributors
+
+#### Larisa-Antsifrova
+
+#### LAleksander-Kovalenko
+
+#### Anna-Sokolova
+
+#### arestus
+
+#### ifinddima
+
+#### Yevheniia123
+
+#### Guns1301
+
+<!-- # parcel-project-template
 
 ## Developing
 
-### Prerequisites
+### Prerequisites -->
 
 На компьютере должен быть установлен [Node.js](https://nodejs.org/en/).
 
