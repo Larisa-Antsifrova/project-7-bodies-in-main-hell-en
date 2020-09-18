@@ -22,11 +22,11 @@
   .button {
     display: block;
 
-    &:focus,
-    &:hover {
-      fill: $accentColor;
-      background-color: $basicWhiteColor;
-    }
+    // &:focus,
+    // &:hover {
+    //   fill: $accentColor;
+    //   background-color: $basicWhiteColor;
+    // }
   }
   .hero-content:last-child {
     margin-top: 72px;
