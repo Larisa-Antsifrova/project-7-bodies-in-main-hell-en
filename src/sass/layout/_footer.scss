@@ -160,6 +160,16 @@
   }
 }
 
+.input-box:valid:required:not(:placeholder-shown) {
+  border: 1px solid $accentColor;
+  color: $accentColor;
+}
+
+.input-box:invalid:required:not(:placeholder-shown) {
+  border: 1px solid red;
+  color: red;
+}
+
 .input-box::placeholder {
   font-weight: 600;
   font-size: 14px;

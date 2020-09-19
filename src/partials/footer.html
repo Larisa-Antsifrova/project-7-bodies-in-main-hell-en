@@ -17,6 +17,7 @@
             <input
               type="text"
               name="name"
+              pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
               class="input-box"
               placeholder="Имя*"
               required
@@ -24,8 +25,9 @@
           </div>
           <div class="input-size">
             <input
-              type="text"
-              name="name"
+              type="tel"
+              name="telephone"
+              pattern="[0-9]{10}"
               class="input-box"
               placeholder="Телефон*"
               required
