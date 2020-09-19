@@ -1,12 +1,4 @@
 .hero-section {
-  // .hero-background {
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   z-index: -1;
-  // }
   position: relative;
   background-image: url(../images/hero-bg/hero-bg-mobile@1x.png);
   background-size: cover;
@@ -21,12 +13,6 @@
   }
   .button {
     display: block;
-
-    // &:focus,
-    // &:hover {
-    //   fill: $accentColor;
-    //   background-color: $basicWhiteColor;
-    // }
   }
   .hero-content:last-child {
     margin-top: 72px;
@@ -34,9 +20,6 @@
       margin-top: 142px;
       width: 100%;
     }
-    // @media screen and (min-width: 1344px) {
-    //   width: 100%;
-    // }
   }
   .hero-content:not(:last-child) {
     @media screen and (max-width: 767px) {
