@@ -137,6 +137,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 
   .icon-burger {
     fill: $primaryTransition;
@@ -184,4 +185,82 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.logo > .logo-flex {
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.21;
+    letter-spacing: 0.04 em;
+    text-align: left;
+    z-index: 999;
+    top: 35px;
+    left: 20px;
+
+    .menu-container.is-open + & {
+      color: white;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+}
+
+.logo-icon {
+  display: inline-block;
+  background-image: url(../images/icons/list-marker/fire-list-marker.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 20px;
+  text-align: left;
+
+  margin-left: 1px;
+  margin-right: 3px;
+
+  @media screen and (min-width: 768px) {
+    width: 21px;
+    height: 30px;
+
+    margin-left: 4px;
+    margin-right: 3px;
+  }
+}
+
+.logo > p {
+  position: absolute;
+  display: block;
+  font-family: Montserrat;
+font-size: 5px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25;
+letter-spacing: 1px;
+text-align: left;
+z-index: 999;
+color: black;
+top: 57px;
+left: 22px;
+
+.menu-container.is-open + & {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+    font-size: 8px;
+    top: 68px;
+    left: 22px;
+  }
+}
+
+.logo-orange {
+    @media screen and (min-width: 768px) {
+    color: #FF6B09;
+  }
 }

@@ -211,8 +211,8 @@
   }
 
   @media screen and (min-width: 1344px) {
-    margin-right: 410px;
-    margin-left: 290px;
+    margin-right: auto;
+    margin-left: 360px;
   }
 }
 
@@ -280,5 +280,72 @@
 
   @media screen and (max-width: 767px) {
     text-align: center;
+  }
+}
+
+.logo-footer {
+  @media screen and (min-width: 1344px) {
+    margin-left: 183px;
+  }
+
+}
+
+.logo-footer > .logo-flex {
+  display: flex;
+  align-items: center;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.21;
+    letter-spacing: 0.04 em;
+    text-align: left;
+    
+    @media screen and (min-width: 768px) {
+      font-size: 26px;
+    }
+}
+
+.logo-footer .logo-icon {
+  display: inline-block;
+  background-image: url(../images/icons/list-marker/fire-list-marker.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 20px;
+  text-align: left;
+
+  margin-left: 3px;
+  margin-right: 3px;
+
+  @media screen and (min-width: 768px) {
+    width: 21px;
+    height: 30px;
+
+    margin-left: 4px;
+    margin-right: 3px;
+  }
+}
+
+.logo-footer > p {
+  display: block;
+  font-family: Montserrat;
+font-size: 5px;
+font-style: normal;
+font-weight: 700;
+line-height: 1.25;
+letter-spacing: 1px;
+text-align: left;
+margin-top: 3px;
+
+@media screen and (min-width: 768px) {
+    font-size: 8px;
+  }
+}
+
+.logo-orange {
+    @media screen and (min-width: 768px) {
+    color: #FF6B09;
   }
 }
