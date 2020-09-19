@@ -67,6 +67,10 @@
 
 .slider-social-link {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   margin-top: 10px;
   padding: 10px;
   border-radius: 50%;
@@ -86,6 +90,30 @@
 .slider-icon {
   width: 30px;
   height: 30px;
+}
+
+.go-it-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  transition: background-color $primaryTransition;
+
+  &:hover,
+  &:focus {
+    background-color: $lightBackgroundColor;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
 }
 
 .slider-item-description-block {
@@ -272,9 +300,38 @@
 }
 
 // Фоновое изображение точки слайдера
-// #slick-slide-control00 {
-//   // background-image: url(/images/reviews/item1_1.png);
-// }
+
+#slick-slide-control00 {
+  background-image: url('/images/slider/slider-54px-00@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-00@2x.jpg');
+  }
+}
+
+#slick-slide-control01 {
+  background-image: url('/images/slider/slider-54px-01@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-01@2x.jpg');
+  }
+}
+#slick-slide-control02 {
+  background-image: url('/images/slider/slider-54px-02@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-02@2x.jpg');
+  }
+}
 
 // Попытка спрятать лишните точки слайдера
 /* hiding all bullets by default */
