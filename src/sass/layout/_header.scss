@@ -99,7 +99,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: 50px;
+    margin-top: 108px;
     margin-bottom: 50px;
 
     .item:not(:last-child) {
@@ -108,8 +108,8 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1343px) {
-    margin-top: 72px;
-    margin-left: 218px;
+    margin-top: 130px;
+    margin-left: 175px;
   }
   @media screen and (min-width: 768px) {
     .item {
@@ -200,17 +200,37 @@
     letter-spacing: 0.04 em;
     text-align: left;
     z-index: 999;
-    top: 35px;
-    left: 20px;
+    top: -39px;
+    left: 0px;
 
-    .menu-container.is-open + & {
+    .menu-container.is-open + .logo-container & {
       color: white;
     }
 
     @media screen and (min-width: 768px) {
       font-size: 26px;
+      top: -48px;
+      left: 0px;
+
     }
+      @media screen and (min-width: 1344px) {
+        top: -55px;
+        left: 0px;
+  }
+
 }
+
+.logo-container {
+  width: 320px;
+  position: relative;
+
+      @media screen and (min-width: 768px) {
+  width: 768px;
+
+    }
+
+}
+
 
 .logo-icon {
   display: inline-block;
@@ -245,18 +265,24 @@ letter-spacing: 1px;
 text-align: left;
 z-index: 999;
 color: black;
-top: 57px;
-left: 22px;
+top: -15px;
+left: 0px;
 
-.menu-container.is-open + & {
+.menu-container.is-open + .logo-container & {
   color: white;
 }
 
 @media screen and (min-width: 768px) {
     font-size: 8px;
-    top: 68px;
-    left: 22px;
+    top: -12px;
+    left: 0px;
   }
+
+  @media screen and (min-width: 1344px) {
+        top: -20px;
+        left: 0px;
+  }
+
 }
 
 .logo-orange {
