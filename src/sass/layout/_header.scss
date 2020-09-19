@@ -98,8 +98,8 @@
     color: $basicWhiteColor;
   }
 
-  @media screen and (max-width: 1343px) {
-    margin-top: 50px;
+  @media screen and (max-width: 767px) {
+    margin-top: 108px;
     margin-bottom: 50px;
 
     .item:not(:last-child) {
@@ -108,8 +108,8 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1343px) {
-    margin-top: 72px;
-    margin-left: 218px;
+    margin-top: 130px;
+    margin-left: 175px;
   }
   @media screen and (min-width: 768px) {
     .item {
@@ -137,6 +137,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin-left: auto;
 
   .icon-burger {
     fill: $primaryTransition;
@@ -184,4 +185,106 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.logo > .logo-flex {
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  text-align: left;
+  z-index: 999;
+  top: -39px;
+  left: 0px;
+
+  .menu-container.is-open + .logo-container & {
+    color: white;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    top: -48px;
+    left: 0px;
+  }
+  @media screen and (min-width: 1344px) {
+    top: -55px;
+    left: 0px;
+  }
+}
+
+.logo-container {
+  width: 320px;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+}
+
+.logo-icon {
+  display: inline-block;
+  background-image: url(../images/icons/list-marker/fire-list-marker.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 14px;
+  height: 20px;
+  text-align: left;
+
+  margin-left: 1px;
+  margin-right: 3px;
+
+  @media screen and (min-width: 768px) {
+    width: 21px;
+    height: 30px;
+
+    margin-left: 4px;
+    margin-right: 3px;
+  }
+}
+
+.logo > p {
+  position: absolute;
+  display: block;
+  font-family: Montserrat;
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.18em;
+  text-align: left;
+  z-index: 999;
+  color: black;
+  top: -15px;
+  left: 0px;
+
+  @media screen and (max-width: 767px) {
+    letter-spacing: 0.25em;
+  }
+
+  .menu-container.is-open + .logo-container & {
+    color: white;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 8px;
+    top: -12px;
+    left: 0px;
+  }
+
+  @media screen and (min-width: 1344px) {
+    top: -20px;
+    left: 0px;
+  }
+}
+
+.logo-orange {
+  @media screen and (min-width: 768px) {
+    color: #ff6b09;
+  }
 }
