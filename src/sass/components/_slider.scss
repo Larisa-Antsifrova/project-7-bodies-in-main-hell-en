@@ -15,41 +15,25 @@
   }
 }
 
-// .slider-container {
-//   width: 100%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 20px;
-//   overflow: hidden;
-//   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+// .slider-item {
+//   min-width: 0%;
+//   background-color: $basicWhiteColor;
+
+//   @media screen and (max-width: 767px) {
+//     padding: 20px 20px 30px;
+
+//     text-align: center;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     padding: 40px;
+//   }
 
 //   @media screen and (min-width: 1344px) {
-//     width: 80%;
+//     padding: 50px;
 //   }
 // }
-
-.slider-item {
-  min-width: 0%;
-  background-color: $basicWhiteColor;
-
-  @media screen and (max-width: 767px) {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    padding: 40px;
-  }
-
-  @media screen and (min-width: 1344px) {
-    display: flex;
-    padding: 50px;
-  }
-}
 
 .slider-item-image-block {
   text-align: center;
@@ -65,20 +49,28 @@
 }
 
 .slider-client-image {
+  border-radius: 50%;
+
   @media screen and (max-width: 767px) {
     width: 90px;
-    height: 90px;
+    height: auto;
     margin: 0 auto;
+
+    border-radius: 50%;
   }
   @media screen and (min-width: 768px) {
     width: 150px;
-    height: 150px;
+    height: auto;
     margin: 0 auto;
   }
 }
 
 .slider-social-link {
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   margin-top: 10px;
   padding: 10px;
   border-radius: 50%;
@@ -100,6 +92,30 @@
   height: 30px;
 }
 
+.go-it-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50%;
+
+  background-color: transparent;
+  transition: background-color $primaryTransition;
+
+  &:hover,
+  &:focus {
+    background-color: $lightBackgroundColor;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
 .slider-item-description-block {
   @media screen and (min-width: 768px) {
     width: calc(100% - (100% - 20px) / 3);
@@ -108,12 +124,7 @@
 
 .slider-item-title {
   margin-bottom: 10px;
-
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-
+  @include font(800, 14px, 1.2, 0.08em);
   color: $accentColor;
 
   @media screen and (min-width: 768px) and (max-width: 1343px) {
@@ -127,11 +138,7 @@
 }
 
 .slider-client-description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.08em;
-
+  @include font(500, 12px, 1.25, 0.08em);
   color: $primaryTextColor;
 
   @media screen and (max-width: 767px) {
@@ -144,13 +151,17 @@
   @media screen and (min-width: 1344px) {
     font-size: 14px;
   }
+  &.role {
+    margin-bottom: 5px;
+  }
+}
+
+.logo-moto {
+  color: $secondaryTextColor;
 }
 
 .slider-feedback {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.67;
-
+  @include font(500, 12px, 1.67, 0.08em);
   color: $secondaryTextColor;
 
   @media screen and (min-width: 1344px) {
@@ -158,9 +169,28 @@
   }
 }
 
-.read-more-link {
+#more {
+  display: none;
+}
+
+.read-more {
+  border: none;
+  background-color: transparent;
   color: $accentColor;
-  text-decoration: underline;
+
+  text-align: center;
+  text-decoration-line: underline;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 1343px) {
+    @include font(500, 12px, 1.67, 0.08em);
+  }
+  @media screen and (min-width: 1344px) {
+    @include font(500, 18px, 1.56, 0.08em);
+  }
 }
 
 /* Слайдер */
@@ -173,14 +203,6 @@
     width: 80%;
   }
 }
-
-// /* Слайдер запущен */
-// .slick-slider.slick-initialized {
-// }
-
-// /* Слайдер с точками */
-// .slick-slider.slick-dotted {
-// }
 
 /* Ограничивающая оболочка */
 .slick-list {
@@ -196,11 +218,12 @@
 
 /* Слайд */
 .slick-slide {
+  min-width: 0%;
+  background-color: $basicWhiteColor;
+
   @media screen and (max-width: 767px) {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
+    padding: 20px 20px 30px;
+
     text-align: center;
   }
 
@@ -210,7 +233,6 @@
   }
 
   @media screen and (min-width: 1344px) {
-    display: flex;
     padding: 50px;
   }
 }
@@ -219,17 +241,24 @@
 .slick-arrow {
   position: absolute;
   bottom: 13px;
-  font-size: 0;
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: contain;
   z-index: 10;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  font-size: 0;
+
   outline: none;
   border: none;
 
   @media screen and (min-width: 768px) {
     bottom: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 }
 
@@ -265,45 +294,171 @@
 .slick-dots {
   position: relative;
   display: flex;
-  list-style: none;
-  justify-content: center;
   margin-top: 20px;
   margin-bottom: 0;
   padding: 0;
+
+  list-style: none;
+  justify-content: center;
 }
 
 .slick-dots li button {
   width: 54px;
   height: 54px;
+  padding: 0;
+
   border-radius: 50%;
   font-size: 0;
   border: none;
-  outline-color: orangered;
+  outline-style: none;
+  cursor: pointer;
 }
 
 /* Активная точка */
 .slick-dots li.slick-active {
-  border: 2px solid #ff6b08;
-  border-radius: 50%;
-  outline-style: none;
+  border: 2px solid $accentColor;
 }
 
 /* Элемент точки */
 .slick-dots li {
-  border: 2px solid grey;
+  border: 2px solid transparent;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 0 5px;
+}
 
-  &:nth-last-of-type(-n + 1) {
-    margin-right: 0px;
+// Фоновое изображение точки слайдера
+
+#slick-slide-control00 {
+  background-image: url('/images/slider/slider-54px-00@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-00@2x.jpg');
   }
 }
-// #slick-slide-control00 {
-//   // background-image: url(/images/reviews/item1_1.png);
-// }
-// #slick-slide-control01 {
-//   // background-image: url(/images/reviews/item2_2.png);
-// }
-// #slick-slide-control02 {
-//   // background-image: url(/images/reviews/item3_3.png);
-// }
+
+#slick-slide-control01 {
+  background-image: url('/images/slider/slider-54px-01@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-01@2x.jpg');
+  }
+}
+#slick-slide-control02 {
+  background-image: url('/images/slider/slider-54px-02@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-02@2x.jpg');
+  }
+}
+
+#slick-slide-control03 {
+  background-image: url('/images/slider/slider-54px-03@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-03@2x.jpg');
+  }
+}
+
+#slick-slide-control04 {
+  background-image: url('/images/slider/slider-54px-04@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-04@2x.jpg');
+  }
+}
+
+#slick-slide-control05 {
+  background-image: url('/images/slider/slider-54px-05@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-05@2x.jpg');
+  }
+}
+
+#slick-slide-control06 {
+  background-image: url('/images/slider/slider-54px-06@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-06@2x.jpg');
+  }
+}
+
+#slick-slide-control07 {
+  background-image: url('/images/slider/slider-54px-07@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-07@2x.jpg');
+  }
+}
+
+#slick-slide-control08 {
+  background-image: url('/images/slider/slider-54px-08@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-08@2x.jpg');
+  }
+}
+
+// Попытка спрятать лишните точки слайдера
+/* hiding all bullets by default */
+.slider {
+  @media screen and (max-width: 767px) {
+    .slick-dots li {
+      display: none;
+    }
+    // /* only displaying the active bullets and the 2 bullets next to it */
+    .slick-dots li.slick-active,
+    .slick-dots li.slick-active + li,
+    .slick-dots li.slick-active + li + li {
+      display: block;
+    }
+    // /* displaying the last three bullets when slick-active class isn't applied to any li before them  */
+    .slick-dots li:nth-last-child(1),
+    .slick-dots li:nth-last-child(2),
+    .slick-dots li:nth-last-child(3) {
+      display: block;
+    }
+    // /* hiding the last three bullets if slick-active exist before them */
+    .slick-dots li.slick-active ~ li:nth-last-child(1),
+    .slick-dots li.slick-active ~ li:nth-last-child(2),
+    .slick-dots li.slick-active ~ li:nth-last-child(3) {
+      display: none;
+    }
+    // /* specific conditions to always display the last three bullets */
+    .slick-dots li.slick-active + li + li:nth-last-child(3),
+    .slick-dots li.slick-active + li + li:nth-last-child(2),
+    .slick-dots li.slick-active + li + li:nth-last-child(1),
+    .slick-dots li.slick-active + li:nth-last-child(3),
+    .slick-dots li.slick-active + li:nth-last-child(2),
+    .slick-dots li.slick-active + li:nth-last-child(1) {
+      display: block;
+    }
+  }
+}
