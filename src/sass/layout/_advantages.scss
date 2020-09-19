@@ -36,9 +36,18 @@
   height: 60px;
 
   @media screen and (min-width: 1344px) {
-    width: 100px;
-    height: 102px;
+    display: none;
   }
+}
+
+.advantages-icon-place-big {
+  @media screen and (max-width: 1343px) {
+    display: none;
+  }
+  width: 100px;
+  height: 102px;
+  border: 2px solid #ff6b09;
+  padding: 26px 24px 26px 24px;
 }
 
 .advantages-discription {
@@ -52,6 +61,7 @@
 
   display: flex;
   align-items: center;
+
   @media screen and (min-width: 1344px) {
     font-weight: 700;
     font-size: 20px;
@@ -59,4 +69,8 @@
 
     margin-left: -10px;
   }
+}
+
+.advantages-discription p {
+  background-color: white;
 }
