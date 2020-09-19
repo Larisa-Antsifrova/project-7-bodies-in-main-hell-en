@@ -11,7 +11,10 @@
           Но ты гарантировано наберешь
           <span class="orange-color">+25 баллов</span>
         </p>
-        <a href="#contacts" class="button">хочу на бесплатное занятие</a>
+        <!-- Deleted the ykhor -->
+        <button href="" class="button" data-modal-open>
+          хочу на бесплатное занятие
+        </button>
       </div>
 
       <div class="hero-content">
@@ -123,3 +126,39 @@
     </div>
   </div>
 </section>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="btn-close-modal" data-modal-close>
+      <svg width="25" height="25">
+        <use href="./images/icons/sprite.svg#icon-close-menu"></use>
+      </svg>
+    </button>
+    <b class="modal-title">
+      Оставь заявку на участие в
+      <span class="orange-color">бесплатном занятии.</span>
+    </b>
+    <form class="form-input">
+      <div class="input-size">
+        <input
+          type="text"
+          name="name"
+          class="input-box"
+          placeholder="Имя*"
+          required
+        />
+      </div>
+      <div class="input-size">
+        <input
+          type="text"
+          name="name"
+          class="input-box"
+          placeholder="Телефон*"
+          required
+        />
+      </div>
+      <button type="submit" class="button footer-button">
+        Хочу на бесплатное занятие
+      </button>
+    </form>
+  </div>
+</div>
