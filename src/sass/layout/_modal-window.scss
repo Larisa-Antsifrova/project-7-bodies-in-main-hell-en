@@ -1,0 +1,111 @@
+// После добавления миксинов заменить атрибуты на закоментированые миксины
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  overflow-y: scroll;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity $primaryTransition;
+  z-index: 1000;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.btn-close-modal {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  padding: 6px 6px;
+  margin-top: 8px;
+  margin-right: 8px;
+
+  // width: 38px;
+  height: 38px;
+
+  fill: #f51d00;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: fill $primaryTransition, border $primaryTransition;
+
+  cursor: pointer;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+    border: 1px solid $accentColor;
+  }
+}
+
+.modal-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 12px;
+  transform: translateY(2px);
+  transition: fill $primaryTransition;
+}
+
+.modal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  padding: 40px 40px;
+  margin-bottom: 10px;
+
+  min-width: 450px;
+  min-height: 509px;
+
+  background-color: $secondaryTextColor;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform $primaryTransition;
+
+  @media screen and (max-width: 479px) {
+    min-width: 100%;
+    padding: 40px;
+    margin: 15px;
+  }
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+
+    @media screen and (min-width: 768px) {
+      min-width: 328px;
+      min-height: 580px;
+    }
+  }
+
+  & .modal-title {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    // margin-bottom: 20px;
+
+    @include font(700, 20px, 1.5, 0.03em);
+    align-items: center;
+
+    color: $basicWhiteColor;
+    border: transparent;
+
+    @media screen and (min-width: 1344px) {
+      width: 50%;
+    }
+  }
+}
