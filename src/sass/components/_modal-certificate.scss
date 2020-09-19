@@ -3,15 +3,11 @@
   transition: 0.3s;
 }
 
-#myImg:hover {
-  opacity: 0.7;
-}
-
 /* The Modal (background) */
 .modal-certificate {
   display: none;
   position: fixed;
-  z-index: 75;
+  z-index: 160;
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 20px;

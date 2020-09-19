@@ -19,6 +19,10 @@ body {
   background-color: $basicWhiteColor;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 body,
 h1,
 h2,
