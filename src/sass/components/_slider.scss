@@ -282,9 +282,10 @@
   padding: 0;
 
   border-radius: 50%;
-  // font-size: 0;
+  font-size: 0;
   border: none;
   outline-style: none;
+  cursor: pointer;
 }
 
 /* Активная точка */
@@ -330,6 +331,72 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: url('/images/slider/slider-108px-02@2x.jpg');
+  }
+}
+
+#slick-slide-control03 {
+  background-image: url('/images/slider/slider-54px-03@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-03@2x.jpg');
+  }
+}
+
+#slick-slide-control04 {
+  background-image: url('/images/slider/slider-54px-04@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-04@2x.jpg');
+  }
+}
+
+#slick-slide-control05 {
+  background-image: url('/images/slider/slider-54px-05@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-05@2x.jpg');
+  }
+}
+
+#slick-slide-control06 {
+  background-image: url('/images/slider/slider-54px-06@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-06@2x.jpg');
+  }
+}
+
+#slick-slide-control07 {
+  background-image: url('/images/slider/slider-54px-07@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-07@2x.jpg');
+  }
+}
+
+#slick-slide-control08 {
+  background-image: url('/images/slider/slider-54px-08@1x.jpg');
+  background-size: contain;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('/images/slider/slider-108px-08@2x.jpg');
   }
 }
 
