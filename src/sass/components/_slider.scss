@@ -165,9 +165,25 @@
 #more {
   display: none;
 }
-.read-more-link {
+
+.read-more {
+  border: none;
+  background-color: transparent;
   color: $accentColor;
-  text-decoration: underline;
+
+  text-align: center;
+  text-decoration-line: underline;
+  @media screen and (max-width: 767px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media screen and (max-width: 1343px) {
+    @include font(500, 12px, 1.67, 0.08em);
+  }
+  @media screen and (min-width: 1344px) {
+    @include font(500, 18px, 1.56, 0.08em);
+  }
 }
 
 /* Слайдер */
