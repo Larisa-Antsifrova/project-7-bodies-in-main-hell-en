@@ -15,41 +15,25 @@
   }
 }
 
-// .slider-container {
-//   width: 100%;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-bottom: 20px;
-//   overflow: hidden;
-//   box-shadow: -5px 8px 26px rgba(0, 0, 0, 0.04);
+// .slider-item {
+//   min-width: 0%;
+//   background-color: $basicWhiteColor;
+
+//   @media screen and (max-width: 767px) {
+//     padding: 20px 20px 30px;
+
+//     text-align: center;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     padding: 40px;
+//   }
 
 //   @media screen and (min-width: 1344px) {
-//     width: 80%;
+//     padding: 50px;
 //   }
 // }
-
-.slider-item {
-  min-width: 0%;
-  background-color: $basicWhiteColor;
-
-  @media screen and (max-width: 767px) {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    padding: 40px;
-  }
-
-  @media screen and (min-width: 1344px) {
-    display: flex;
-    padding: 50px;
-  }
-}
 
 .slider-item-image-block {
   text-align: center;
@@ -108,12 +92,7 @@
 
 .slider-item-title {
   margin-bottom: 10px;
-
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-
+  @include font(800, 14px, 1.2, 0.08em);
   color: $accentColor;
 
   @media screen and (min-width: 768px) and (max-width: 1343px) {
@@ -127,11 +106,7 @@
 }
 
 .slider-client-description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.08em;
-
+  @include font(500, 12px, 1.25, 0.08em);
   color: $primaryTextColor;
 
   @media screen and (max-width: 767px) {
@@ -147,10 +122,7 @@
 }
 
 .slider-feedback {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.67;
-
+  @include font(500, 12px, 1.67, 0.08em);
   color: $secondaryTextColor;
 
   @media screen and (min-width: 1344px) {
@@ -174,14 +146,6 @@
   }
 }
 
-// /* Слайдер запущен */
-// .slick-slider.slick-initialized {
-// }
-
-// /* Слайдер с точками */
-// .slick-slider.slick-dotted {
-// }
-
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -196,11 +160,12 @@
 
 /* Слайд */
 .slick-slide {
+  min-width: 0%;
+  background-color: $basicWhiteColor;
+
   @media screen and (max-width: 767px) {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 30px;
+    padding: 20px 20px 30px;
+
     text-align: center;
   }
 
@@ -210,7 +175,6 @@
   }
 
   @media screen and (min-width: 1344px) {
-    display: flex;
     padding: 50px;
   }
 }
@@ -219,17 +183,24 @@
 .slick-arrow {
   position: absolute;
   bottom: 13px;
-  font-size: 0;
-  width: 30px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-size: contain;
   z-index: 10;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+
+  font-size: 0;
+
   outline: none;
   border: none;
 
   @media screen and (min-width: 768px) {
     bottom: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 }
 
@@ -265,45 +236,42 @@
 .slick-dots {
   position: relative;
   display: flex;
-  list-style: none;
-  justify-content: center;
   margin-top: 20px;
   margin-bottom: 0;
   padding: 0;
+
+  list-style: none;
+  justify-content: center;
 }
 
 .slick-dots li button {
   width: 54px;
   height: 54px;
+  padding: 0;
+
   border-radius: 50%;
   font-size: 0;
   border: none;
-  outline-color: orangered;
+  outline-style: none;
 }
 
 /* Активная точка */
 .slick-dots li.slick-active {
-  border: 2px solid #ff6b08;
-  border-radius: 50%;
-  outline-style: none;
+  border: 2px solid $accentColor;
 }
 
 /* Элемент точки */
 .slick-dots li {
-  border: 2px solid grey;
+  border: 2px solid transparent;
   border-radius: 50%;
-  margin-right: 10px;
+  margin: 0 5px;
 
   &:nth-last-of-type(-n + 1) {
     margin-right: 0px;
   }
+
+  // Фоновое изображение точки слайдера
 }
-// #slick-slide-control00 {
-//   // background-image: url(/images/reviews/item1_1.png);
-// }
-// #slick-slide-control01 {
-//   // background-image: url(/images/reviews/item2_2.png);
-// }
-// #slick-slide-control02 {
-//   // background-image: url(/images/reviews/item3_3.png);
-// }
+#slick-slide-control00 {
+  // background-image: url(/images/reviews/item1_1.png);
+}
