@@ -47,12 +47,12 @@
 
   @media screen and (min-width: 320px) {
     max-width: 320px;
-    min-height: 500px;
+    min-height: 400px;
   }
 
   @media screen and (min-width: 768px) {
     max-width: 550px;
-    min-height: 600px;
+    height: 500px;
   }
 
   @media screen and (min-width: 1344px) {
@@ -64,7 +64,7 @@
     transition: transform $primaryTransition;
 
     width: 550px;
-    height: 600px;
+    height: 500px;
   }
 }
 
