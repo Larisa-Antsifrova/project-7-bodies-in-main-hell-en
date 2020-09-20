@@ -84,3 +84,72 @@
     background-color: $accentColor;
   }
 }
+.button-center {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+.button-hero {
+  position: relative;
+  padding: 15px 5px;
+  min-width: 260px;
+  min-height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+  text-align: center;
+
+  @include font(700, 12px, 1.25, 0.08em);
+  text-transform: uppercase;
+
+  border: 2px solid $accentColor;
+  color: $basicWhiteColor;
+  background-color: $accentColor;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+
+  @media screen and (min-width: 1344px) {
+    padding: 25px 20px;
+    min-width: 336px;
+    min-height: 70px;
+    @include font(700, 14px, 1.2, 0.14em);
+  }
+}
+
+.button-hero span {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: $basicWhiteColor;
+  transform: translateY(100%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.button-hero:hover {
+  color: $accentColor;
+}
+
+.button-hero:hover span {
+  transform: translateY(-60%) scale(2.1);
+}
+
+.button-hero span:nth-child(1) {
+  --n: 1;
+}
+
+.button-hero span:nth-child(2) {
+  --n: 2;
+}
+
+.button-hero span:nth-child(3) {
+  --n: 3;
+}
+
+.button-hero span:nth-child(4) {
+  --n: 4;
+}
