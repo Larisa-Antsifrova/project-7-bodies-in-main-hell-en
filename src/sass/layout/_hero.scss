@@ -57,6 +57,16 @@
       }
     }
   }
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero-bg/hero-bg-tablet@1x.png);
+    background-position-y: -170px;
+  }
+  @media screen and (min-width: 1344px) {
+    padding-bottom: 100px;
+
+    background-image: url(../images/hero-bg/hero-bg-desktop@1x.png);
+    background-position-y: -200px;
+  }
 }
 
 .hero-container {

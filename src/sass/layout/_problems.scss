@@ -6,6 +6,9 @@
   );
 
   @media screen and (min-width: 1344px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
     background-image: url(../images/icons/bcg/fire-background.svg),
       linear-gradient(to bottom, $darkBackgrounColor 75%, $basicWhiteColor 50%);
     background-position: 100% 25%;
