@@ -141,6 +141,7 @@
         <input
           type="text"
           name="name"
+          pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
           class="input-box"
           placeholder="Имя*"
           required
@@ -148,15 +149,20 @@
       </div>
       <div class="input-size">
         <input
-          type="text"
-          name="name"
+          type="tel"
+          name="telephone"
+          pattern="[0-9]{10}"
           class="input-box"
           placeholder="Телефон*"
           required
         />
       </div>
-      <button type="submit" class="button footer-button">
+      <button type="submit" class="button footer-button button-hero">
         Хочу на бесплатное занятие
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </form>
   </div>

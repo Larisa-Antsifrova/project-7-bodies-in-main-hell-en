@@ -1,6 +1,7 @@
 // После добавления миксинов заменить атрибуты на закоментированые миксины
 .backdrop {
   position: fixed;
+  padding: 15px;
   top: 0;
   left: 0;
   height: 100%;
@@ -10,7 +11,7 @@
 
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity $primaryTransition;
-  z-index: 1000;
+  // z-index: 1000;
 
   &.is-hidden {
     opacity: 0;
@@ -57,8 +58,8 @@
 }
 
 .modal {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   justify-content: center;
   position: absolute;
   top: 50%;
@@ -68,8 +69,8 @@
   padding: 40px 40px;
   margin-bottom: 10px;
 
-  min-width: 450px;
-  min-height: 509px;
+  // min-width: 450px;
+  // min-height: 509px;
 
   background-color: $secondaryTextColor;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -77,9 +78,9 @@
   border-radius: 4px;
   transition: transform $primaryTransition;
 
-  @media screen and (max-width: 479px) {
-    min-width: 100%;
-    padding: 40px;
+  @media screen and (max-width: 319px) {
+    width: 100%;
+    padding: 15px;
     margin: 15px;
   }
 
