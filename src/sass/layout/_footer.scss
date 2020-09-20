@@ -251,10 +251,21 @@
 }
 
 .contacts-icon {
-  width: 20px;
-  height: 20px;
   vertical-align: middle;
   margin-right: 10px;
+
+  @media screen and (max-width: 767px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 25px;
+    height: 25px;
+  }
+  @media screen and (min-width: 1344px) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .instagram-link {
@@ -297,24 +308,23 @@
   @media screen and (min-width: 1344px) {
     margin-left: 183px;
   }
-
 }
 
 .logo-footer > .logo-flex {
   display: flex;
   align-items: center;
 
-    font-family: Montserrat;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 1.21;
-    letter-spacing: 0.04 em;
-    text-align: left;
-    
-    @media screen and (min-width: 768px) {
-      font-size: 26px;
-    }
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.21;
+  letter-spacing: 0.04 em;
+  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
 }
 
 .logo-footer .logo-icon {
@@ -341,21 +351,21 @@
 .logo-footer > p {
   display: block;
   font-family: Montserrat;
-font-size: 5px;
-font-style: normal;
-font-weight: 700;
-line-height: 1.25;
-letter-spacing: 1px;
-text-align: left;
-margin-top: 3px;
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 3px;
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     font-size: 8px;
   }
 }
 
 .logo-orange {
-    @media screen and (min-width: 768px) {
-    color: #FF6B09;
+  @media screen and (min-width: 768px) {
+    color: #ff6b09;
   }
 }
