@@ -203,6 +203,10 @@
 
 .animation:hover span {
   transform: translateY(-60%) scale(2.1);
+
+  @media screen and (min-width: 1344px) {
+    transform: translateY(-37%) scale(2.3);
+  }
 }
 
 .animation span:nth-child(1) {
