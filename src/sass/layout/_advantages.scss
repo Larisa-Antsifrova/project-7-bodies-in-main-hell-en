@@ -32,6 +32,18 @@
   width: 60px;
   height: 60px;
 
+  border-top: 2px solid #ff6b09;
+  border-left: 2px solid #ff6b09;
+  border-bottom: 2px solid #ff6b09;
+
+  background: linear-gradient(#ff6b09, #ff6b09),
+    linear-gradient(#ff6b09, #ff6b09);
+  background-size: 2px 8px, 2px 8px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom right, top right;
+
+  padding: 11px 12px 11px 12px;
+
   @media screen and (min-width: 1344px) {
     display: none;
   }
@@ -69,5 +81,7 @@
 }
 
 .advantages-discription p {
-  background-color: white;
+  @media screen and (min-width: 1344px) {
+    background-color: $basicWhiteColor;
+  }
 }
