@@ -132,15 +132,19 @@
         <use href="./images/icons/sprite.svg#icon-close-menu"></use>
       </svg>
     </button>
-    <b class="modal-title">
-      Оставь заявку на участие в
-      <span class="orange-color">бесплатном занятии.</span>
-    </b>
+    <p class="modal-title">
+      <b>
+        Оставь заявку на участие в
+        <span class="orange-color">бесплатном занятии.</span>
+      </b>
+    </p>
+
     <form class="form-input">
       <div class="input-size">
         <input
           type="text"
           name="name"
+          pattern="[A-Za-zА-Яа-яЁё\s]{2,}"
           class="input-box"
           placeholder="Имя*"
           required
@@ -148,15 +152,20 @@
       </div>
       <div class="input-size">
         <input
-          type="text"
-          name="name"
+          type="tel"
+          name="telephone"
+          pattern="[0-9]{10}"
           class="input-box"
           placeholder="Телефон*"
           required
         />
       </div>
-      <button type="submit" class="button footer-button">
-        Хочу на бесплатное занятие
+      <button type="submit" class="button-modal-send">
+        Жду звонка
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </form>
   </div>
