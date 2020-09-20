@@ -71,24 +71,7 @@
   }
 }
 
-.header-link.button {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link.button {
-  &:hover,
-  &:focus {
-    cursor: pointer;
-    color: $basicWhiteColor;
-    background-color: $accentColor;
-  }
-}
-.button-center {
-  @media screen and (max-width: 767px) {
-    text-align: center;
-  }
-}
+// Анимация рыжей кнопки
 .button-hero {
   position: relative;
   padding: 15px 5px;
@@ -151,5 +134,89 @@
 }
 
 .button-hero span:nth-child(4) {
+  --n: 4;
+}
+
+// Анимация пустой кнопки
+
+// .header-link.button {
+//   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .header-link.button {
+//   &:hover,
+//   &:focus {
+//     cursor: pointer;
+//     color: $basicWhiteColor;
+//     background-color: $accentColor;
+//   }
+// }
+// .button-center {
+//   @media screen and (max-width: 767px) {
+//     text-align: center;
+//   }
+// }
+
+.button.animation {
+  position: relative;
+  padding: 15px 5px;
+  min-width: 260px;
+  min-height: 48px;
+
+  align-items: center;
+  text-align: center;
+
+  @include font(700, 12px, 1.25, 0.08em);
+  text-transform: uppercase;
+
+  border: 2px solid $accentColor;
+  color: $accentColor;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+
+  @media screen and (min-width: 1344px) {
+    padding: 25px 20px;
+    min-width: 336px;
+    min-height: 70px;
+    @include font(700, 14px, 1.2, 0.14em);
+  }
+}
+
+.animation span {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: $accentColor;
+  transform: translateY(100%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.animation:hover {
+  color: $basicWhiteColor;
+}
+
+.animation:hover span {
+  transform: translateY(-60%) scale(2.1);
+}
+
+.animation span:nth-child(1) {
+  --n: 1;
+}
+
+.animation span:nth-child(2) {
+  --n: 2;
+}
+
+.animation span:nth-child(3) {
+  --n: 3;
+}
+
+.animation span:nth-child(4) {
   --n: 4;
 }
