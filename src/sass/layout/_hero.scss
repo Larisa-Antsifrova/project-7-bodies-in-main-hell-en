@@ -81,24 +81,31 @@
 }
 
 .hero-title {
-  @include font(800, 20px, 1.35, 0.03em);
   color: $primaryTitleColor;
   margin-bottom: 30px;
 
-  .hero-label {
-    display: block;
+  @media screen and (max-width: 767px) {
+    @include font(800, 20px, 1.35, 0.03em);
+    max-width: 244px;
   }
-  @media screen and (min-width: 768px) {
-    font-size: 26px;
+
+  @media screen and (min-width: 768px) and (max-width: 1343px) {
+    @include font(800, 26px, 1.3, 0.03em);
+    max-width: 280px;
   }
+
   @media screen and (min-width: 1344px) {
-    font-size: 58px;
+    @include font(800, 58px, 1.29, 0.03em);
   }
 }
 
 .hero-description {
   margin-bottom: 30px;
   @include font(700, 14px, 1.57, 0.08em);
+
+  @media screen and (min-width: 768px) and (max-width: 1343px) {
+    width: 285px;
+  }
 
   .grey-color {
     display: block;
