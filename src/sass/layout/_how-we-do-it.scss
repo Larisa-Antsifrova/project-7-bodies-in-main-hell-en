@@ -1,6 +1,13 @@
 .how-we-do-it-section {
   padding-bottom: 50px;
 
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
+  @media screen and (min-width: 1344px) {
+    padding-bottom: 130px;
+  }
+
   .title-how {
     margin-bottom: 30px;
     text-align: center;
