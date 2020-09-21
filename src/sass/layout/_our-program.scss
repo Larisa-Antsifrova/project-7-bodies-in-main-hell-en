@@ -114,6 +114,12 @@
   }
 }
 
+.program-item:before {
+  content: '—';
+  margin-right: 10px;
+  color: $accentColor;
+}
+
 .program-section .program-list:not(:last-child) {
   margin-bottom: 18px;
   padding-left: 0;
