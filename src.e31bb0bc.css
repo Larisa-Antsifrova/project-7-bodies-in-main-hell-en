@@ -569,12 +569,12 @@ input:focus {
   margin-left: auto;
 }
 .menu-btn .icon-burger {
-  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn .icon-burger .icon-close {
   fill: #ffffff;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover .icon-burger, .menu-btn:focus .icon-burger {
   fill: #ff6b09;
@@ -1823,7 +1823,7 @@ input:focus {
 }
 
 .why-we-section {
-  background-image: linear-gradient(to bottom, #111518 75%, #ffffff 50%);
+  background-image: linear-gradient(to bottom, #111518 55%, #ffffff 50%);
 }
 
 @media screen and (max-width: 767px) {
@@ -2433,7 +2433,6 @@ input:focus {
   font-style: normal;
   font-weight: 800;
   line-height: 1.21;
-  letter-spacing: 0.04 em;
   text-align: left;
 }
 @media screen and (min-width: 768px) {
@@ -2541,6 +2540,12 @@ input:focus {
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.14em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .button-center {
+    text-align: center;
   }
 }
 
