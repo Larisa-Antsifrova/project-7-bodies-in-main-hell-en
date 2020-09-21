@@ -1104,7 +1104,7 @@ input:focus {
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url(/fire-background.7144c19e.svg), linear-gradient(to bottom, #111518 75%, #ffffff 50%);
-    background-position: 100% 40%;
+    background-position: 100% 45%;
     background-repeat: no-repeat;
   }
 }
@@ -1488,6 +1488,12 @@ input:focus {
   }
 }
 
+.program-item:before {
+  content: "—";
+  margin-right: 10px;
+  color: #ff6b09;
+}
+
 .program-section .program-list:not(:last-child) {
   margin-bottom: 18px;
   padding-left: 0;
@@ -1638,6 +1644,10 @@ input:focus {
     bottom: -220px;
     right: 780px;
   }
+}
+
+.item-position.title-flex > li {
+  margin-bottom: 25px;
 }
 
 .section-teacher {
