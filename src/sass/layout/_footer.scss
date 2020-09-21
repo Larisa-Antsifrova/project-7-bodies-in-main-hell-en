@@ -357,18 +357,19 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: 1px;
+  letter-spacing: 0.25em;
   text-align: left;
   margin-top: 3px;
 
   @media screen and (min-width: 768px) {
     font-size: 8px;
+    letter-spacing: 0.13em;
   }
 }
 
 .logo-orange {
   @media screen and (min-width: 768px) {
-    color: #ff6b09;
+    color: $accentColor;
   }
 }
 
