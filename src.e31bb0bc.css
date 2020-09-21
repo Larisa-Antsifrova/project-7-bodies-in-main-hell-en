@@ -383,6 +383,16 @@ a {
   cursor: pointer;
 }
 
+input {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  transition: 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+input:focus {
+  border: 1px solid #ff6b09;
+  outline: none;
+}
+
 .section {
   padding: 50px 0;
 }
@@ -792,25 +802,36 @@ a {
 }
 
 .hero-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.35;
-  letter-spacing: 0.03em;
   color: #111518;
   margin-bottom: 30px;
 }
-.hero-title .hero-label {
-  display: block;
-}
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0.03em;
+    max-width: 244px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
     font-size: 26px;
+    line-height: 1.3;
+    letter-spacing: 0.03em;
+    max-width: 280px;
   }
 }
 @media screen and (min-width: 1344px) {
   .hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
     font-size: 58px;
+    line-height: 1.29;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -821,6 +842,11 @@ a {
   font-size: 14px;
   line-height: 1.57;
   letter-spacing: 0.08em;
+}
+@media screen and (min-width: 768px) and (max-width: 1343px) {
+  .hero-description {
+    width: 285px;
+  }
 }
 .hero-description .grey-color {
   display: block;
@@ -921,7 +947,7 @@ a {
   margin-top: 8px;
   margin-right: 8px;
   height: 38px;
-  fill: #f51d00;
+  fill: #111518;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1078,7 +1104,7 @@ a {
     padding-top: 100px;
     padding-bottom: 100px;
     background-image: url(/fire-background.7144c19e.svg), linear-gradient(to bottom, #111518 75%, #ffffff 50%);
-    background-position: 100% 25%;
+    background-position: 100% 40%;
     background-repeat: no-repeat;
   }
 }
@@ -1683,7 +1709,10 @@ a {
 
 .teacher-name {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b9b9b9;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 20px;
   line-height: 1.2;
@@ -1692,25 +1721,22 @@ a {
 @media screen and (min-width: 768px) {
   .teacher-name {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1344px) {
   .teacher-name {
     margin-top: 0;
-    margin-bottom: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 30px;
     line-height: 1.23;
   }
 }
 
-.decor-line {
-  margin-bottom: 20px;
-  display: block;
-  width: 100%;
-  border-bottom: 1px solid #b9b9b9;
+.teacher-list {
+  padding-left: 23px;
 }
-
 @media screen and (min-width: 1344px) {
   .teacher-list {
     width: 578px;
@@ -1718,27 +1744,18 @@ a {
 }
 
 .teacher-item {
-  display: flex;
-  margin-top: 20px;
+  list-style-image: url(/check-list-marker.4fc3839d.svg);
+  padding-left: 10px;
 }
 .teacher-item:first-child {
   margin-top: 0;
 }
+.teacher-item:not(:last-child) {
+  margin-bottom: 15px;
+}
 @media screen and (min-width: 768px) {
   .teacher-item {
     margin-top: 30px;
-  }
-}
-
-.teacher-icon-check {
-  width: 17px;
-  height: 14px;
-  margin-right: 10px;
-}
-@media screen and (min-width: 768px) {
-  .teacher-icon-check {
-    width: 24px;
-    height: 20px;
   }
 }
 
@@ -1755,7 +1772,7 @@ a {
   }
 }
 
-.decor-line-orange {
+.teacher-experience:before {
   content: " ";
   display: block;
   width: 20px;
@@ -1765,7 +1782,7 @@ a {
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1344px) {
-  .decor-line-orange {
+  .teacher-experience:before {
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -1969,7 +1986,7 @@ a {
   .warranty-section {
     padding-top: 0;
     padding-bottom: 0;
-    background: linear-gradient(to bottom, #ffffff 18%, #f1f1f1 18%);
+    background: linear-gradient(to bottom, #ffffff 13%, #f1f1f1 13%);
   }
 }
 @media screen and (min-width: 768px) {
@@ -2032,7 +2049,7 @@ a {
 }
 .warranty-section li::before {
   position: absolute;
-  left: -16px;
+  left: -12px;
   top: 21px;
   content: "";
   height: 100%;
@@ -2322,10 +2339,6 @@ a {
   font-size: 14px;
   line-height: 1.21;
   letter-spacing: 0.08em;
-  color: #111518;
-}
-.contacts-phone:hover .contacts-link {
-  color: #ff6b09;
 }
 @media screen and (min-width: 768px) {
   .contacts-phone {
@@ -2338,6 +2351,13 @@ a {
     font-size: 30px;
     line-height: 1.23;
   }
+}
+.contacts-phone .contacts-link {
+  color: #111518;
+  transition: 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-phone .contacts-link:hover {
+  color: #ff6b09;
 }
 
 .contacts-icon {
@@ -2426,7 +2446,7 @@ a {
   display: inline-block;
   background-image: url(/fire-list-marker.ff97cd07.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 14px;
   height: 20px;
   text-align: left;
@@ -2449,13 +2469,14 @@ a {
   font-style: normal;
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: 1px;
+  letter-spacing: 0.25em;
   text-align: left;
   margin-top: 3px;
 }
 @media screen and (min-width: 768px) {
   .logo-footer > p {
     font-size: 8px;
+    letter-spacing: 0.13em;
   }
 }
 
@@ -2478,6 +2499,10 @@ a {
   border: none;
   border-radius: 5px;
   opacity: 0.7;
+  display: none;
+}
+.button-scroll-up:hover {
+  opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .button-scroll-up {
