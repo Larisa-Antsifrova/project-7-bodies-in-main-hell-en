@@ -141,20 +141,20 @@
   }
 }
 
-.decor-line-orange {
-  content: ' ';
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: $accentColor;
-  margin-top: 20px;
-  margin-bottom: 20px;
+// .decor-line-orange {
+//   content: ' ';
+//   display: block;
+//   width: 20px;
+//   height: 2px;
+//   background-color: $accentColor;
+//   margin-top: 20px;
+//   margin-bottom: 20px;
 
-  @media screen and (min-width: 1344px) {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-}
+//   @media screen and (min-width: 1344px) {
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+//   }
+// }
 
 .teacher-experience:before {
   content: ' ';
