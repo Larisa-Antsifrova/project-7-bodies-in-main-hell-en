@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+// * {
+//   outline: 2px solid tomato;
+// }
+
+body {
+  font-family: $primaryFont;
+  color: $primaryTitleColor;
+  background-color: $basicWhiteColor;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid $basicWhiteColor;
+  border-radius: 4px;
+  transition: 250ms $primaryTransition;
+  &:focus {
+    border: 1px solid $accentColor;
+    outline: none;
+  }
+}

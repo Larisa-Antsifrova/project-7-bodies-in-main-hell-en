@@ -1,0 +1,232 @@
+.button {
+  padding: 15px 1px;
+  border: 2px solid $accentColor;
+  width: 260px;
+  height: 48px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  align-items: center;
+  text-align: center;
+
+  color: $basicWhiteColor;
+  background-color: $accentColor;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.headr-link:hover,
+  &.headr-link:focus {
+    cursor: pointer;
+    color: $accentColor;
+    background-color: $basicWhiteColor;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 354px;
+    height: 70px;
+    padding: 26px 0 26px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+  }
+}
+
+.button-center {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.mobile-menu-button {
+  padding: 15px 1px;
+  border: 2px solid #ff6b09;
+
+  width: 260px;
+  height: 48px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: $accentColor;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    color: $accentColor;
+    background-color: $basicWhiteColor;
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 336px;
+    height: 70px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+  }
+}
+
+// Анимация рыжей кнопки
+.button-hero {
+  position: relative;
+  padding: 15px 5px;
+  min-width: 260px;
+  min-height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+  text-align: center;
+
+  @include font(700, 12px, 1.25, 0.08em);
+  text-transform: uppercase;
+
+  border: 2px solid $accentColor;
+  color: $basicWhiteColor;
+  background-color: $accentColor;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+
+  @media screen and (min-width: 1344px) {
+    padding: 25px 20px;
+    min-width: 336px;
+    min-height: 70px;
+    @include font(700, 14px, 1.2, 0.14em);
+  }
+}
+
+.button-hero span {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: $basicWhiteColor;
+  transform: translateY(100%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.button-hero:hover {
+  color: $accentColor;
+}
+
+.button-hero:hover span {
+  transform: translateY(-60%) scale(2.1);
+}
+
+.button-hero span:nth-child(1) {
+  --n: 1;
+}
+
+.button-hero span:nth-child(2) {
+  --n: 2;
+}
+
+.button-hero span:nth-child(3) {
+  --n: 3;
+}
+
+.button-hero span:nth-child(4) {
+  --n: 4;
+}
+
+// Анимация пустой кнопки
+
+// .header-link.button {
+//   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+//     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .header-link.button {
+//   &:hover,
+//   &:focus {
+//     cursor: pointer;
+//     color: $basicWhiteColor;
+//     background-color: $accentColor;
+//   }
+// }
+// .button-center {
+//   @media screen and (max-width: 767px) {
+//     text-align: center;
+//   }
+// }
+
+.button.animation {
+  position: relative;
+  padding: 15px 5px;
+  min-width: 260px;
+  min-height: 48px;
+
+  align-items: center;
+  text-align: center;
+
+  @include font(700, 12px, 1.25, 0.08em);
+  text-transform: uppercase;
+
+  border: 2px solid $accentColor;
+  color: $accentColor;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+
+  @media screen and (min-width: 1344px) {
+    padding: 25px 20px;
+    min-width: 336px;
+    min-height: 70px;
+    @include font(700, 14px, 1.2, 0.14em);
+  }
+}
+
+.animation span {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: $accentColor;
+  transform: translateY(100%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.animation:hover {
+  color: $basicWhiteColor;
+}
+
+.animation:hover span {
+  transform: translateY(-60%) scale(2.1);
+
+  @media screen and (min-width: 1344px) {
+    transform: translateY(-37%) scale(2.3);
+  }
+}
+
+.animation span:nth-child(1) {
+  --n: 1;
+}
+
+.animation span:nth-child(2) {
+  --n: 2;
+}
+
+.animation span:nth-child(3) {
+  --n: 3;
+}
+
+.animation span:nth-child(4) {
+  --n: 4;
+}
