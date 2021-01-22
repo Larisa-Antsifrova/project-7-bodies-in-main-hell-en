@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://github.com/Larisa-Antsifrova/7-bodies-in-main-hell-en",
+  "homepage": "https://github.com/Larisa-Antsifrova/project-7-bodies-in-main-hell-en",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/7-bodies-in-main-hell-en/",
+    "predeploy": "npm run build -- --public-url=/project-7-bodies-in-main-hell-en",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/Larisa-Antsifrova/project-7-bodies-in-main-hell-en.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Larisa Antsifrova",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/Larisa-Antsifrova/project-7-bodies-in-main-hell-en/issues"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
